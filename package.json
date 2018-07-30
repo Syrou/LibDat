@@ -2,8 +2,8 @@
   "name": "LibDat",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/DatContainer.js",
-  "types": "dist/DatContainer.d.ts",
+  "main": "dist/index.js",
+  "types": "dist/index.d.ts",
   "scripts": {
     "start": "npm run build:live",
     "build:live": "nodemon --exec node_modules/.bin/ts-node -- index.ts",

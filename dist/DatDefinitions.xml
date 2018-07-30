@@ -2960,15 +2960,15 @@
 			<field id="RangeMax" type="int"/>
 			<field id="Null6" type="int"/>
 		</record>
-		<record file="Wordlists" length="0"/>
-		<record file="Words" length="36">
-			<field id="WordType" type="int"/>
+		<record file="Wordlists"/>
+		<record file="Words">
+			<field id="WordlistsKey" type="int"/>
 			<field id="Text" type="ref|string"/>
-			<field id="TagsList" type="ref|list|ulong"/>
-			<field id="Data1" type="ref|list|uint"/>
+			<field id="SpawnWeight_TagsKeys" type="ref|list|ulong" key="Tags.dat"/>
+			<field id="SpawnWeight_Values" type="ref|list|uint"/>
 			<field id="Unknown6" type="int"/>
-			<field id="Unknown7" type="ref|string" isUser="1"/>
-            <field id="Unknown6" type="int"/>
+			<field id="Text2" type="ref|string"/>
+      <field id="Inflection" type="ref|string"/>
 		</record>
 		<record file="WorldAreas" length="439">
 			<field id="Id" type="ref|string"/>
