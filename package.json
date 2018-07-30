@@ -20,7 +20,8 @@
     ]
   },
   "files": [
-    "src/DatDefinitions.xml"
+    "src/DatDefinitions.xml",
+    "dist/**"
   ],
   "dependencies": {
     "@types/csvtojson": "^1.1.5",

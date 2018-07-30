@@ -7,16 +7,16 @@
     "strict": true,
     "sourceMap": true,
     "declaration": true,
-    "baseUrl": ".",
     "allowSyntheticDefaultImports": true,
     "experimentalDecorators": true,
     "emitDecoratorMetadata": true,
     "outDir": "dist",
     "typeRoots": [
       "node_modules/@types"
-    ],
+    ]
   },
   "include": [
     "src/**/*",
   ],
+  "exclude": ["dist", "json"]
 }
