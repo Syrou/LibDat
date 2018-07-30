@@ -2,8 +2,6 @@
   "name": "LibDat",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/DatContainer.js",
-  "types": "dist/DatContainer.d.ts",
   "directories": {
     "lib": "dist"
   },
