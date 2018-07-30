@@ -2,11 +2,14 @@
   "name": "LibDat",
   "version": "1.0.0",
   "description": "",
-  "main": "dist/index.js",
-  "types": "dist/index.d.ts",
+  "main": "dist/DatContainer.js",
+  "types": "dist/DatContainer.d.ts",
+  "directories":{
+      "lib": "dist"
+  },
   "scripts": {
     "start": "npm run build:live",
-    "build:live": "nodemon --exec node_modules/.bin/ts-node -- index.ts",
+    "build:live": "ts-node -- index.ts",
     "prepublishOnly": "npm run compile",
     "compile": "npm run clean && tsc -p . && npm run xmlcopy",
     "watch": "tsc -w -p .",
