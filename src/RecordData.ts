@@ -1,0 +1,26 @@
+import RecordInfo from "./RecordInfo";
+import FieldData from "./FieldData";
+import { BinaryReader } from "./io";
+import List from "./List";
+
+export default class RecordData{
+    RecordInfo:RecordInfo
+    Index:number
+    readonly FieldsData:List<FieldData>
+
+    constructor(recordInfo:RecordInfo, inStream:BinaryReader, index:number){
+        this.RecordInfo = recordInfo;
+        this.Index = index;
+        this.FieldsData = new List<FieldData>();
+
+        inStream.seek(4 + recordInfo.Length*index)
+        let startOffset:number = inStream.position();
+        this.RecordInfo.Fields.toArray().forEach(element => {
+            var elementOffset:number = (startOffset + element.RecordOffset);
+            inStream.seek(elementOffset);
+            var fieldData:FieldData|null = new FieldData(element, inStream);
+            this.FieldsData.add(fieldData);
+            fieldData = null;
+        });
+    }
+}

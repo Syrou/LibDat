@@ -1,0 +1,55 @@
+{
+  "name": "LibDat",
+  "version": "1.0.0",
+  "description": "",
+  "main": "dist/DatContainer.js",
+  "types": "dist/DatContainer.d.ts",
+  "scripts": {
+    "start": "npm run build:live",
+    "build:live": "nodemon --exec node_modules/.bin/ts-node -- index.ts",
+    "prepublishOnly": "npm run compile",
+    "compile": "npm run clean && tsc -p . && npm run xmlcopy",
+    "watch": "tsc -w -p .",
+    "clean": "rm -rf dist",
+    "xmlcopy": "cp ./src/DatDefinitions.xml ./dist/"
+  },
+  "nodemonConfig": {
+    "ignore": [
+      "json/*.json"
+    ]
+  },
+  "files": [
+    "src/DatDefinitions.xml"
+  ],
+  "dependencies": {
+    "@types/csvtojson": "^1.1.5",
+    "@types/mkdirp": "^0.5.2",
+    "@types/utf8": "^2.1.6",
+    "binutils": "^0.1.0",
+    "bytebuffer": "^5.0.1",
+    "convert-csv-to-json": "0.0.13",
+    "csvtojson": "^2.0.0",
+    "javascript-to-typescript": "^1.0.2",
+    "long": "^4.0.0",
+    "mkdirp": "^0.5.1",
+    "pako": "^1.0.5",
+    "typescript-dotnet-umd": "^4.10.0",
+    "utf8": "^2.1.2",
+    "xmldoc": "^1.1.0"
+  },
+  "keywords": [],
+  "author": "Joakim Forslund (http://www.syrou.eu)",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/bytebuffer": "^5.0.37",
+    "@types/lodash": "^4.14.109",
+    "@types/long": "^4.0.0",
+    "@types/node": "^10.0.8",
+    "@types/xmldoc": "^1.1.2",
+    "nodemon": "^1.17.4",
+    "ts-node": "^6.0.5",
+    "typescript": "^2.8.3",
+    "typescript-char": "0.0.0",
+    "typings": "^2.1.1"
+  }
+}

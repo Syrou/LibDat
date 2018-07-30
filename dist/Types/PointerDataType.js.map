@@ -1,0 +1,1 @@
+{"version":3,"file":"PointerDataType.js","sourceRoot":"","sources":["../../src/Types/PointerDataType.ts"],"names":[],"mappings":";;AAAA,iDAA8C;AAE9C,qBAAqC,SAAQ,2BAAY;IAGxD,YAAY,IAAY,EAAE,KAAa,EAAE,YAAoB,EAAE,OAAqB;QAEnF,KAAK,CAAC,IAAI,EAAE,KAAK,EAAE,YAAY,CAAC,CAAC;QACjC,IAAI,CAAC,OAAO,GAAG,OAAO,CAAC;IACxB,CAAC;CACD;AARD,kCAQC"}
