@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "directories": {
-    "lib": "dist"
+    "lib": "./dist"
   },
   "scripts": {
     "start": "npm run build:live",
