@@ -1,28 +1,27 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var List = /** @class */ (function () {
-    function List() {
+class List {
+    constructor() {
         this.items = [];
     }
-    List.prototype.size = function () {
+    size() {
         return this.items.length;
-    };
-    List.prototype.add = function (value) {
+    }
+    add(value) {
         this.items.push(value);
-    };
-    List.prototype.get = function (index) {
+    }
+    get(index) {
         return this.items[index];
-    };
-    List.prototype.toArray = function () {
+    }
+    toArray() {
         return this.items;
-    };
-    List.prototype.indexOf = function (element) {
+    }
+    indexOf(element) {
         return this.items.indexOf(element);
-    };
-    List.prototype.clear = function () {
+    }
+    clear() {
         this.items.splice(0, this.items.length);
-    };
-    return List;
-}());
+    }
+}
 exports.default = List;
 //# sourceMappingURL=List.js.map

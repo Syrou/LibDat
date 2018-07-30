@@ -1,22 +1,21 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var Dictionary = /** @class */ (function () {
-    function Dictionary() {
+class Dictionary {
+    constructor() {
         this.map = new Map();
     }
-    Dictionary.prototype.setValue = function (key, value) {
+    setValue(key, value) {
         this.map.set(key, value);
-    };
-    Dictionary.prototype.remove = function (key) {
+    }
+    remove(key) {
         this.map.delete(key);
-    };
-    Dictionary.prototype.getValue = function (key) {
+    }
+    getValue(key) {
         return this.map.get(key);
-    };
-    Dictionary.prototype.containsKey = function (key) {
+    }
+    containsKey(key) {
         return this.map.has(key);
-    };
-    return Dictionary;
-}());
+    }
+}
 exports.default = Dictionary;
 //# sourceMappingURL=Dictionary.js.map

@@ -4,8 +4,8 @@
   "description": "",
   "main": "dist/DatContainer.js",
   "types": "dist/DatContainer.d.ts",
-  "directories":{
-      "lib": "dist"
+  "directories": {
+    "lib": "dist"
   },
   "scripts": {
     "start": "npm run build:live",

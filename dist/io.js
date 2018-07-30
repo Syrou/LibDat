@@ -1,63 +1,63 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var ByteBuffer = require("bytebuffer");
-var BinaryReader = /** @class */ (function () {
-    function BinaryReader(data, littleEndian) {
+const ByteBuffer = require("bytebuffer");
+class BinaryReader {
+    constructor(data, littleEndian) {
         this.buffer = ByteBuffer.wrap(data, littleEndian);
         this.buffer.offset = 0;
         this.LittleEndian = littleEndian;
     }
-    BinaryReader.prototype.seek = function (position) {
+    seek(position) {
         this.buffer.offset = position;
-    };
-    BinaryReader.prototype.position = function () {
+    }
+    position() {
         return this.buffer.offset;
-    };
-    BinaryReader.prototype.readUInt8 = function () {
+    }
+    readUInt8() {
         var value = this.buffer.readUint8();
         return value;
-    };
-    BinaryReader.prototype.ReadUInt32 = function () {
+    }
+    ReadUInt32() {
         var s_Val = this.buffer.readUint32();
         return s_Val;
-    };
-    BinaryReader.prototype.ReadBoolean = function () {
+    }
+    ReadBoolean() {
         var value = this.buffer.readByte();
         return value != 0;
-    };
-    BinaryReader.prototype.ReadInt8 = function () {
+    }
+    ReadInt8() {
         var s_Val = this.buffer.readInt8();
         return s_Val;
-    };
-    BinaryReader.prototype.ReadInt16 = function () {
+    }
+    ReadInt16() {
         return this.buffer.readInt16();
         ;
-    };
-    BinaryReader.prototype.ReadUInt16 = function () {
+    }
+    ReadUInt16() {
         return this.buffer.readUint16();
-    };
-    BinaryReader.prototype.ReadInt32 = function () {
+    }
+    ReadInt32() {
         return this.buffer.readInt32();
-    };
-    BinaryReader.prototype.ReadUInt64 = function () {
+    }
+    ReadUInt64() {
         return this.buffer.readUint64();
-    };
-    BinaryReader.prototype.ReadInt64 = function () {
+    }
+    ReadInt64() {
         return this.buffer.readInt64();
-    };
-    BinaryReader.prototype.ReadFloat = function () {
+    }
+    ReadFloat() {
         return this.buffer.readFloat();
-    };
-    BinaryReader.prototype.ReadDouble = function () {
+    }
+    ReadDouble() {
         return this.buffer.readDouble();
-    };
-    BinaryReader.prototype.ReadByte = function () {
+    }
+    ReadByte() {
         return this.buffer.readByte();
-    };
-    BinaryReader.prototype.ReadBytes = function (length) {
+    }
+    ReadBytes(length) {
         return this.buffer.readBytes(length);
-    };
-    BinaryReader.prototype.ReadString = function () {
+    }
+    ReadString() {
         var strb = "";
         var chr;
         while ((chr = this.buffer.readInt16()) != 0) {
@@ -67,59 +67,57 @@ var BinaryReader = /** @class */ (function () {
             console.log("OOOPS?");
         }
         return strb;
-    };
-    return BinaryReader;
-}());
+    }
+}
 exports.BinaryReader = BinaryReader;
-var BinaryWriter = /** @class */ (function () {
-    function BinaryWriter(capacity, endianness) {
+class BinaryWriter {
+    constructor(capacity, endianness) {
         this.ByteBuffer = new ByteBuffer(capacity, endianness);
         this.Endianness = endianness;
     }
-    BinaryWriter.prototype.WriteBoolean = function (value) {
+    WriteBoolean(value) {
         var boolByte = value ? 1 : 0;
         this.ByteBuffer.writeByte(boolByte);
-    };
-    BinaryWriter.prototype.WriteUInt8 = function (value) {
+    }
+    WriteUInt8(value) {
         this.ByteBuffer.writeUint8(value);
-    };
-    BinaryWriter.prototype.WriteUInt16 = function (value) {
+    }
+    WriteUInt16(value) {
         this.ByteBuffer.writeUint16(value);
-    };
-    BinaryWriter.prototype.WriteUInt32 = function (value) {
+    }
+    WriteUInt32(value) {
         this.ByteBuffer.writeUint32(value);
-    };
-    BinaryWriter.prototype.WriteInt8 = function (value) {
+    }
+    WriteInt8(value) {
         this.ByteBuffer.writeInt8(value);
-    };
-    BinaryWriter.prototype.WriteInt16 = function (value) {
+    }
+    WriteInt16(value) {
         this.ByteBuffer.writeInt16(value);
-    };
-    BinaryWriter.prototype.WriteInt32 = function (value) {
+    }
+    WriteInt32(value) {
         this.ByteBuffer.writeInt32(value);
-    };
-    BinaryWriter.prototype.WriteInt64 = function (value) {
+    }
+    WriteInt64(value) {
         this.ByteBuffer.writeInt64(value);
-    };
-    BinaryWriter.prototype.WriteUInt64 = function (value) {
+    }
+    WriteUInt64(value) {
         this.ByteBuffer.writeUint64(value);
-    };
-    BinaryWriter.prototype.WriteFloat = function (value) {
+    }
+    WriteFloat(value) {
         this.ByteBuffer.writeFloat(value);
-    };
-    BinaryWriter.prototype.WriteDouble = function (value) {
+    }
+    WriteDouble(value) {
         this.ByteBuffer.writeDouble(value);
-    };
-    BinaryWriter.prototype.WriteBytes = function (value, endcoding) {
+    }
+    WriteBytes(value, endcoding) {
         this.ByteBuffer.writeBytes(value, endcoding);
-    };
-    BinaryWriter.prototype.WriteByte = function (value) {
+    }
+    WriteByte(value) {
         this.ByteBuffer.writeByte(value);
-    };
-    BinaryWriter.prototype.WriteString = function (value) {
+    }
+    WriteString(value) {
         this.ByteBuffer.writeCString(value);
-    };
-    return BinaryWriter;
-}());
+    }
+}
 exports.BinaryWriter = BinaryWriter;
 //# sourceMappingURL=io.js.map

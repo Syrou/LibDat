@@ -1,35 +1,33 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-var DatContainer_1 = require("../DatContainer");
-var BaseDataType_1 = require("./BaseDataType");
-var RegularExpressions_1 = require("typescript-dotnet-umd/System/Text/RegularExpressions");
-var util_1 = require("util");
-var PointerDataType_1 = require("./PointerDataType");
-var ListDataType_1 = require("./ListDataType");
-var ListData_1 = require("../Data/ListData");
-var Dictionary_1 = require("../Dictionary");
-var PointerData_1 = require("../Data/PointerData");
-var ByteData_1 = require("../Data/ByteData");
-var ShortData_1 = require("../Data/ShortData");
-var UShortData_1 = require("../Data/UShortData");
-var FloatData_1 = require("../Data/FloatData");
-var Int32Data_1 = require("../Data/Int32Data");
-var Int64Data_1 = require("../Data/Int64Data");
-var UInt64Data_1 = require("../Data/UInt64Data");
-var StringData_1 = require("../Data/StringData");
-var BooleanData_1 = require("../Data/BooleanData");
-var TypeFactory = /** @class */ (function () {
-    function TypeFactory() {
-    }
-    TypeFactory.GetDataSectionOffset = function (reader) {
+const DatContainer_1 = require("../DatContainer");
+const BaseDataType_1 = require("./BaseDataType");
+const RegularExpressions_1 = require("typescript-dotnet-umd/System/Text/RegularExpressions");
+const util_1 = require("util");
+const PointerDataType_1 = require("./PointerDataType");
+const ListDataType_1 = require("./ListDataType");
+const ListData_1 = require("../Data/ListData");
+const Dictionary_1 = require("../Dictionary");
+const PointerData_1 = require("../Data/PointerData");
+const ByteData_1 = require("../Data/ByteData");
+const ShortData_1 = require("../Data/ShortData");
+const UShortData_1 = require("../Data/UShortData");
+const FloatData_1 = require("../Data/FloatData");
+const Int32Data_1 = require("../Data/Int32Data");
+const Int64Data_1 = require("../Data/Int64Data");
+const UInt64Data_1 = require("../Data/UInt64Data");
+const StringData_1 = require("../Data/StringData");
+const BooleanData_1 = require("../Data/BooleanData");
+class TypeFactory {
+    static GetDataSectionOffset(reader) {
         return reader.position() - DatContainer_1.DatContainer.DataSectionOffset;
-    };
-    TypeFactory.ParseType = function (fieldType) {
+    }
+    static ParseType(fieldType) {
         if (this.HasTypeInfo(fieldType)) {
             return this.GetTypeInfo(fieldType);
         }
-        var type;
-        var match = new RegularExpressions_1.Regex(/(\w+\|)?(.+)/);
+        let type;
+        let match = new RegularExpressions_1.Regex(/(\w+\|)?(.+)/);
         if (match.isMatch(fieldType)) {
             var test = match.match(fieldType);
             var matches = match.matches(fieldType);
@@ -60,16 +58,16 @@ var TypeFactory = /** @class */ (function () {
             this._types.setValue(fieldType, type);
         }
         return type;
-    };
-    TypeFactory.ParseValueType = function (fieldType) {
+    }
+    static ParseValueType(fieldType) {
         var match = new RegularExpressions_1.Regex("^(\w+)$");
         if (match.isMatch(fieldType)) {
             return this.GetTypeInfo(match.matches(fieldType)[0].value);
         }
         match = null;
         throw new Error("Not a valid value type definitation ${fieldType}");
-    };
-    TypeFactory.LoadValueTypes = function () {
+    }
+    static LoadValueTypes() {
         this._types = new Dictionary_1.default();
         this._types.setValue("bool", new BaseDataType_1.BaseDataType("bool", 1, 4));
         this._types.setValue("byte", new BaseDataType_1.BaseDataType("byte", 1, 4));
@@ -80,21 +78,21 @@ var TypeFactory = /** @class */ (function () {
         this._types.setValue("long", new BaseDataType_1.BaseDataType("long", 8, 4));
         this._types.setValue("ulong", new BaseDataType_1.BaseDataType("ulong", 8, 4));
         this._types.setValue("string", new BaseDataType_1.BaseDataType("string", -1, 4));
-    };
-    TypeFactory.HasTypeInfo = function (type) {
+    }
+    static HasTypeInfo(type) {
         return this._types.containsKey(type);
-    };
-    TypeFactory.GetTypeInfo = function (type) {
+    }
+    static GetTypeInfo(type) {
         if (!this.HasTypeInfo(type)) {
-            throw new Error("Unknown data type: " + type);
+            throw new Error(`Unknown data type: ${type}`);
         }
         var result = this._types.getValue(type);
         if (!util_1.isNullOrUndefined(result)) {
             return result;
         }
-        throw new Error("Could not find value for type: " + type);
-    };
-    TypeFactory.CreateData = function (type, inStream, options) {
+        throw new Error(`Could not find value for type: ${type}`);
+    }
+    static CreateData(type, inStream, options) {
         if (type instanceof ListDataType_1.ListDataType) {
             return new ListData_1.default(type, inStream, options);
         }
@@ -140,13 +138,12 @@ var TypeFactory = /** @class */ (function () {
                 break;
             }
             default: {
-                var error = "Unknown value type name: " + type.Name;
+                var error = `Unknown value type name: ${type.Name}`;
                 throw new Error(error);
             }
         }
         return data;
-    };
-    return TypeFactory;
-}());
+    }
+}
 exports.default = TypeFactory;
 //# sourceMappingURL=TypeFactory.js.map
