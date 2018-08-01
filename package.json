@@ -12,7 +12,7 @@
     "compile": "npm run clean && tsc -p . && npm run xmlcopy",
     "watch": "tsc -w -p .",
     "clean": "rm -rf dist",
-    "xmlcopy": "cp ./src/DatDefinitions.xml ./dist/"
+    "xmlcopy": "cp ./src/DatDefinitions.json ./dist/"
   },
   "nodemonConfig": {
     "ignore": [
