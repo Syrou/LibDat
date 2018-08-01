@@ -1,7 +1,7 @@
 export default class Dictionary<K, V>{
     map:Map<K, V> = new Map<K, V>()
     constructor(){
-    
+
     }
 
     setValue(key:K, value:V){
@@ -19,5 +19,8 @@ export default class Dictionary<K, V>{
     containsKey(key:K){
         return this.map.has(key);
     }
-}
 
+    size():Number{
+      return this.map.size;
+    }
+}

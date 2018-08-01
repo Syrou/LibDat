@@ -5,4 +5,5 @@ export default class Dictionary<K, V> {
     remove(key: K): void;
     getValue(key: K): V | undefined;
     containsKey(key: K): boolean;
+    size(): Number;
 }

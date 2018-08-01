@@ -6,7 +6,7 @@ import RecordData from "./RecordData";
 import { Stream } from "stream";
 import * as path from 'path';
 import * as fs from 'fs';
-import RecordFactory from "./RecordFactory";
+import RecordFactory from "./RecordFactory2";
 import { isNullOrUndefined } from "util";
 import { BinaryReader } from "./io";
 import { FILE } from "dns";

@@ -16,6 +16,9 @@ class Dictionary {
     containsKey(key) {
         return this.map.has(key);
     }
+    size() {
+        return this.map.size;
+    }
 }
 exports.default = Dictionary;
 //# sourceMappingURL=Dictionary.js.map
