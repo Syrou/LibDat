@@ -22,7 +22,6 @@ export default class RecordFactory {
         var data:any = fs.readFileSync(definitionPath);
         var dataAsJson:any = JSON.parse(data);
         var records = dataAsJson.definitions.records;
-
         if(records === null){
             throw new Error("Did not find any record definitions in json file");
         }
@@ -39,17 +38,6 @@ export default class RecordFactory {
             var error = `Invalid Record: record has wrong attribute 'id': ${object}`
             throw new Error(error);
         }
-        //var lengthString = this.GetAttributeValue(element, "length");
-        /*if(isNullOrUndefined(lengthString)){
-            var error = `Invalid XML: record has wrong attribute 'length': ${element}`
-            throw new Error(error);
-        }
-        var length:number = Number(lengthString)
-        if(length === 0){
-            this.Records.setValue(file, new RecordInfo(file));
-            return;
-        }*/
-
         var fields = new List<FieldInfo>();
         var index = 0;
         var totalLength = 0;
@@ -76,8 +64,8 @@ export default class RecordFactory {
                   index++
                   totalLength += dataType.Width;
           });
-          this.Records.setValue(file, new RecordInfo(file, totalLength, fields));
       }
+      this.Records.setValue(file, new RecordInfo(file, totalLength, fields));
     }
 
     static isNullOrEmpty(s: string|undefined): boolean {
@@ -96,9 +84,6 @@ export default class RecordFactory {
         if(!this.Records.containsKey(datName)){
             //throw new Error("Not defined parser for filename: "+datName);
         }
-        console.log("RECORDS LENGTH: ", this.Records.size());
-        console.log("DOES IT?: ", this.Records.containsKey(datName));
-        console.log("HMMM: ", this.Records.getValue(datName));
         return this.Records.getValue(datName);
     }
 }

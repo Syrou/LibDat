@@ -33,16 +33,6 @@ class RecordFactory {
             var error = `Invalid Record: record has wrong attribute 'id': ${object}`;
             throw new Error(error);
         }
-        //var lengthString = this.GetAttributeValue(element, "length");
-        /*if(isNullOrUndefined(lengthString)){
-            var error = `Invalid XML: record has wrong attribute 'length': ${element}`
-            throw new Error(error);
-        }
-        var length:number = Number(lengthString)
-        if(length === 0){
-            this.Records.setValue(file, new RecordInfo(file));
-            return;
-        }*/
         var fields = new List_1.default();
         var index = 0;
         var totalLength = 0;
@@ -64,8 +54,8 @@ class RecordFactory {
                 index++;
                 totalLength += dataType.Width;
             });
-            this.Records.setValue(file, new RecordInfo_1.default(file, totalLength, fields));
         }
+        this.Records.setValue(file, new RecordInfo_1.default(file, totalLength, fields));
     }
     static isNullOrEmpty(s) {
         if (util_1.isUndefined(s)) {
@@ -81,9 +71,6 @@ class RecordFactory {
         if (!this.Records.containsKey(datName)) {
             //throw new Error("Not defined parser for filename: "+datName);
         }
-        console.log("RECORDS LENGTH: ", this.Records.size());
-        console.log("DOES IT?: ", this.Records.containsKey(datName));
-        console.log("HMMM: ", this.Records.getValue(datName));
         return this.Records.getValue(datName);
     }
 }
