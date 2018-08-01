@@ -35,7 +35,7 @@ export default class RecordFactory {
     private static ProcessRecordDefinition(object:any){
         var file = object.file
         if(isNullOrUndefined(file)){
-            var error = `Invalid Record: record has wrong attribute 'id': ${object}`
+            var error = `Invalid Record: record has no file: ${object}`
             throw new Error(error);
         }
         var fields = new List<FieldInfo>();

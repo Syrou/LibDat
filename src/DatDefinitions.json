@@ -417,10 +417,10 @@
          },
          {
             "file":"AreaTransitionAnimationTypes",
-            "fields":{
+            "fields":[{
                "id":"Id",
                "type":"ref|string"
-            }
+            }]
          },
          {
             "file":"AreaTransitionAnimations",
@@ -615,10 +615,11 @@
          },
          {
             "file":"ArmourTypes",
-            "fields":{
-               "id":"Index(BaseItemTypes.datRow)",
-               "type":"long"
-            }
+            "fields":[{
+               "id":"BaseItemTypesKey",
+               "type":"ulong",
+               "key":"BaseItemTypes.dat"
+            }]
          },
          {
             "file":"Ascendancy",
@@ -1525,10 +1526,10 @@
          },
          {
             "file":"CharacterStartStateSet",
-            "fields":{
+            "fields":[{
                "id":"Id",
                "type":"ref|string"
-            }
+            }]
          },
          {
             "file":"CharacterStartStates",
@@ -5658,10 +5659,10 @@
          },
          {
             "file":"MicrotransactionCharacterPortraitVariations",
-            "fields":{
+            "fields":[{
                "id":"Key0",
                "type":"ulong"
-            }
+            }]
          },
          {
             "file":"MicrotransactionCombineForumula",
@@ -5739,11 +5740,11 @@
          },
          {
             "file":"MicrotransactionSocialFrameVariations",
-            "fields":{
+            "fields":[{
                "id":"BaseItemTypesKey",
                "type":"long",
                "key":"BaseItemTypes.dat"
-            }
+            }]
          },
          {
             "file":"MinimapIcons",
@@ -5905,10 +5906,10 @@
          },
          {
             "file":"ModSellPriceTypes",
-            "fields":{
+            "fields":[{
                "id":"Id",
                "type":"ref|string"
-            }
+            }]
          },
          {
             "file":"ModSellPrices",
@@ -6959,11 +6960,11 @@
          },
          {
             "file":"MysteryBoxes",
-            "fields":{
+            "fields":[{
                "id":"BaseItemTypesKey",
                "type":"ulong",
                "key":"BaseItemTypes.dat"
-            }
+            }]
          },
          {
             "file":"NPCAudio",
@@ -7556,11 +7557,11 @@
          },
          {
             "file":"PassiveJewelSlots",
-            "fields":{
+            "fields":[{
                "id":"PassiveSkillsKey",
                "type":"ulong",
                "key":"PassiveSkills.dat"
-            }
+            }]
          },
          {
             "file":"PassiveSkillStatCategories",
@@ -7933,10 +7934,10 @@
          },
          {
             "file":"PreloadGroups",
-            "fields":{
+            "fields":[{
                "id":"Id",
                "type":"ref|string"
-            }
+            }]
          },
          {
             "file":"PreloadPriorities"
@@ -8864,10 +8865,10 @@
          },
          {
             "file":"ShopRegion",
-            "fields":{
+            "fields":[{
                "id":"Id",
                "type":"ref|string"
-            }
+            }]
          },
          {
             "file":"ShopToken",

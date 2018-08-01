@@ -1,0 +1,1 @@
+Actual record length = 8 not equal length by the sum of each record in the xml specification: 0
