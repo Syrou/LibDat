@@ -29,7 +29,7 @@ export default class RecordFactory {
         records.forEach((element:any) => {
             this.ProcessRecordDefinition(element);
         });
-        dataAsJson = null
+        dataAsJson = null;
     }
 
     private static ProcessRecordDefinition(object:any){
@@ -66,6 +66,7 @@ export default class RecordFactory {
           });
       }
       this.Records.setValue(file, new RecordInfo(file, totalLength, fields));
+      object = null;
     }
 
     static isNullOrEmpty(s: string|undefined): boolean {

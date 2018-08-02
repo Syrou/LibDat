@@ -56,6 +56,7 @@ class RecordFactory {
             });
         }
         this.Records.setValue(file, new RecordInfo_1.default(file, totalLength, fields));
+        object = null;
     }
     static isNullOrEmpty(s) {
         if (util_1.isUndefined(s)) {
