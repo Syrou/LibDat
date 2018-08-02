@@ -588,15 +588,7 @@
                },
                {
                   "id":"Unknown24",
-                  "type":"byte"
-               },
-               {
-                  "id":"Unknown25",
-                  "type":"byte"
-               },
-               {
-                  "id":"Unknown26",
-                  "type":"byte"
+                  "type":"int"
                },
                {
                   "id":"Keys1",
