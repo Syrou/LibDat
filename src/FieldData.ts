@@ -11,19 +11,18 @@ import { BaseDataType } from "./Types/BaseDataType";
 export default class FieldData{
     Data:AbstractData
     FieldInfo:FieldInfo
-    constructor(fieldInfo:FieldInfo, reader:BinaryReader){
+    constructor(fieldInfo:FieldInfo, reader:BinaryReader, fieldIndex:Number){
         this.FieldInfo = fieldInfo;
         var offset:number = TypeFactory.GetDataSectionOffset(reader);
         var dictionary = new Dictionary<string, any>();
         dictionary.setValue("offset", offset);
-        this.Data = TypeFactory.CreateData(fieldInfo.FieldType, reader, dictionary);
-
+        this.Data = TypeFactory.CreateData(fieldInfo.FieldType, reader, dictionary, fieldIndex);
     }
 
     GetOffsetPrefix():string{
         if(!this.FieldInfo.IsPointer){
             return "";
-        } 
+        }
 
         var pData = this.Data as PointerData
         if(isNullOrUndefined(pData)){

@@ -11,7 +11,7 @@ export default class PointerData extends AbstractData
 	public RefData: AbstractData;
 	public RefType: BaseDataType;
 
-	constructor(dataType:PointerDataType, reader:BinaryReader, options:Dictionary<string, any>) 
+	constructor(dataType:PointerDataType, reader:BinaryReader, options:Dictionary<string, any>)
 	{
 		super(dataType);
 		var flag: boolean = !options.containsKey("offset");
@@ -26,7 +26,7 @@ export default class PointerData extends AbstractData
 		reader.seek(DatContainer.DataSectionOffset + this.Offset);
 
 		var refParams = this.RefType.ReadPointer(reader);
-		this.RefData = TypeFactory.CreateData(this.RefType, reader, refParams);
+		this.RefData = TypeFactory.CreateData(this.RefType, reader, refParams, -1);
 
 		DatContainer.DataPointers.setValue(this.Offset, this);
 	}

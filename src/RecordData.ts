@@ -12,13 +12,12 @@ export default class RecordData{
         this.RecordInfo = recordInfo;
         this.Index = index;
         this.FieldsData = new List<FieldData>();
-
-        inStream.seek(4 + recordInfo.Length*index)
+        inStream.seek(4 + recordInfo.Length * index)
         let startOffset:number = inStream.position();
-        this.RecordInfo.Fields.toArray().forEach(element => {
+        this.RecordInfo.Fields.toArray().forEach((element, fieldIndex) => {
             var elementOffset:number = (startOffset + element.RecordOffset);
             inStream.seek(elementOffset);
-            var fieldData:FieldData|null = new FieldData(element, inStream);
+            var fieldData:FieldData|null = new FieldData(element, inStream, fieldIndex);
             this.FieldsData.add(fieldData);
             fieldData = null;
         });

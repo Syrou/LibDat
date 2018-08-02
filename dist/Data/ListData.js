@@ -26,7 +26,7 @@ class ListData extends AbstractData_1.default {
                 var listEntryOffset = currentOffset + i * this.ListType.Width;
                 var dictionary = new Dictionary_1.default();
                 dictionary.setValue("offset", listEntryOffset);
-                var item = TypeFactory_1.default.CreateData(this.ListType, reader, dictionary);
+                var item = TypeFactory_1.default.CreateData(this.ListType, reader, dictionary, i);
                 this.List.add(item);
             }
             DatContainer_1.DatContainer.DataEntries.setValue(this.Offset, this);

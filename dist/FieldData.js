@@ -4,12 +4,12 @@ const TypeFactory_1 = require("./Types/TypeFactory");
 const Dictionary_1 = require("./Dictionary");
 const util_1 = require("util");
 class FieldData {
-    constructor(fieldInfo, reader) {
+    constructor(fieldInfo, reader, fieldIndex) {
         this.FieldInfo = fieldInfo;
         var offset = TypeFactory_1.default.GetDataSectionOffset(reader);
         var dictionary = new Dictionary_1.default();
         dictionary.setValue("offset", offset);
-        this.Data = TypeFactory_1.default.CreateData(fieldInfo.FieldType, reader, dictionary);
+        this.Data = TypeFactory_1.default.CreateData(fieldInfo.FieldType, reader, dictionary, fieldIndex);
     }
     GetOffsetPrefix() {
         if (!this.FieldInfo.IsPointer) {

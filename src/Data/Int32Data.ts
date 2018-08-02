@@ -5,7 +5,7 @@ import Dictionary from '../Dictionary'
 import { DatContainer } from "../DatContainer";
 
 export default class Int32Data extends AbstractData{
-    
+
     Value:number;
     constructor(type:BaseDataType, reader:BinaryReader, options:Dictionary<string, any>){
         super(type)
@@ -15,7 +15,6 @@ export default class Int32Data extends AbstractData{
 
         this.Offset = options.getValue("offset");
         reader.seek(DatContainer.DataSectionOffset + this.Offset)
-
         this.Value = reader.ReadInt32();
         this.Length = type.Width;
     }

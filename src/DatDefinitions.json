@@ -2865,7 +2865,7 @@
             "fields":[
                {
                   "id":"Id",
-                  "type":"ref|string"
+                  "type":"int"
                },
                {
                   "id":"MonsterVarietiesKey",
@@ -4484,15 +4484,12 @@
             "file":"InvasionMonstersPerArea",
             "fields":[
                {
-                  "id":"Index0",
-                  "type":"long"
+                  "id":"WorldAreasKey",
+                  "type":"ulong",
+                  "key":"WorldAreas.dat"
                },
                {
-                  "id":"Unknown0",
-                  "type":"int"
-               },
-               {
-                  "id":"Unknown1",
+                  "id":"Unknown2",
                   "type":"int"
                },
                {
@@ -4501,22 +4498,28 @@
                },
                {
                   "id":"MonsterVarietiesKeys1",
-                  "type":"ref|list|ulong"
+                  "type":"ref|list|ulong",
+                  "key":"MonsterVarieties.dat"
                },
                {
                   "id":"MonsterVarietiesKeys2",
-                  "type":"ref|list|ulong"
+                  "type":"ref|list|ulong",
+                  "key":"MonsterVarieties.dat"
                },
                {
-                  "id":"Unknown2",
+                  "id":"Unknown9",
                   "type":"int"
                },
                {
-                  "id":"Unknown3",
+                  "id":"Unknown10",
                   "type":"int"
                },
                {
-                  "id":"Unknown4",
+                  "id":"Unknown11",
+                  "type":"int"
+               },
+               {
+                  "id":"Unknown12",
                   "type":"int"
                }
             ]
@@ -8074,16 +8077,16 @@
                   "type":"int"
                },
                {
+                  "id":"Unknown2",
+                  "type":"ref|list|int"
+               },
+               {
                   "id":"Unknown3",
                   "type":"ref|list|int"
                },
                {
-                  "id":"Unknown2",
-                  "type":"int"
-               },
-               {
                   "id":"Unknown4",
-                  "type":"ref|list|int"
+                  "type":"int"
                }
             ]
          },

@@ -4,7 +4,6 @@ import AbstractData from './Data/AbstractData';
 import RecordInfo from "./RecordInfo";
 import RecordData from "./RecordData";
 import { BinaryReader } from "./io";
-import FieldData from "./FieldData";
 import List from "./List";
 export declare class DatContainer {
     readonly DatName: string;
@@ -22,11 +21,8 @@ export declare class DatContainer {
     constructor(directory: string, filePath: string, x: (instance: DatContainer) => void);
     SaveError(errorString: String): void;
     Read(inStream: BinaryReader): void;
-    SaveToCsv(): void;
     SaveToJson(): string;
     private constructJson;
     private FindRecordLength;
     GetJsonFormat(): string;
-    GetCsvFormat(): string;
-    getCsvString(fieldData: FieldData): string;
 }

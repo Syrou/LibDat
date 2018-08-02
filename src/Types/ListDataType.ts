@@ -18,7 +18,6 @@ export class ListDataType extends BaseDataType
 		var dictionary: Dictionary<string, any> = new Dictionary<string, any>();
 		var count: number = reader.ReadInt32();
 		var offset: number = reader.ReadInt32();
-		console.log("NAME: ", this.name, " COUNT: ", count, " OFFSET: ", offset, " BUFFER POSITION: ", reader.position());
 		dictionary.setValue("count", count);
 		dictionary.setValue("offset", offset);
 		return dictionary;

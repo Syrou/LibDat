@@ -20,6 +20,8 @@ import StringData from '../Data/StringData';
 import BooleanData from '../Data/BooleanData';
 
 export default class TypeFactory {
+    static lastSuccessfullyParsedType:BaseDataType;
+    static currentFieldIndex:Number;
     static _types: Dictionary<string, BaseDataType>;
 
    static GetDataSectionOffset(reader:BinaryReader):number{
@@ -60,6 +62,7 @@ export default class TypeFactory {
        if(type !== null || type !== undefined){
         this._types.setValue(fieldType, type)
        }
+       this.lastSuccessfullyParsedType = type;
        return type;
    }
 
@@ -100,7 +103,15 @@ export default class TypeFactory {
        throw new Error(`Could not find value for type: ${type}`)
    }
 
-   public static CreateData(type:BaseDataType, inStream:BinaryReader, options:Dictionary<string, any>):AbstractData{
+   public static CreateData(type:BaseDataType, inStream:BinaryReader, options:Dictionary<string, any>, fieldIndex:Number):AbstractData{
+        if(fieldIndex){
+         this.currentFieldIndex = fieldIndex;
+        }
+        if(inStream.position() > inStream.buffer.capacity()){
+          var error = `Trying to read outside record length, this usually indicates records being assigned to wrong type!\nType was: ${this.lastSuccessfullyParsedType.Name} found at field entry number: ${this.currentFieldIndex}`;
+          throw new Error(error);
+        }
+
         if(type instanceof ListDataType){
             return new ListData(type, inStream, options)
         }

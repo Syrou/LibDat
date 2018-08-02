@@ -115,19 +115,10 @@ export class DatContainer {
   			recordData = null
   		}
     } catch(e){
-      console.log(e);
+      console.error(`Error parsing ${this.DatName}`);
+			console.error(e);
     }
 
-	}
-
-	public SaveToCsv(){
-		console.log("Converting Records to CSV...");
-		fs.writeFile(`./${this.DatName}.csv`, this.GetCsvFormat(), function(err) {
-			if(err) {
-				return console.log(err);
-			}
-			//console.log("The file was saved!");
-		});
 	}
 
 	public SaveToJson():string{
@@ -165,7 +156,7 @@ export class DatContainer {
 		inStream.seek(4);
 		var stringLength = inStream.buffer.capacity();
 		var recordLength = 0;
-		for(var i=0; inStream.position() <= stringLength -8;i++){
+		for(var i=0; inStream.position() <= stringLength - 8;i++){
 			var ul:Long = inStream.ReadUInt64();
 			var pattern = Long.fromNumber(0xBBbbBBbbBBbbBBbb, true);
 			if(ul.toNumber() === pattern.toNumber()){
@@ -192,60 +183,5 @@ export class DatContainer {
 			});
 		}
 		return JSON.stringify(jsonArray, null, "\t");
-	}
-
-	public GetCsvFormat():string{
-		const separator:string = ","
-		var csv:string ="";
-    if(this.Records && this.RecordInfo) {
-  		var fieldInfos = this.RecordInfo.Fields;
-
-  		if(this.RecordInfo.Length === 0){
-  			var line = `Count: ${this.Count}`;
-  			csv = csv.concat(line);
-  			return csv;
-  		}
-  		//add header
-  		var line = `Rows${separator}`;
-  		csv = csv.concat(line);
-  		fieldInfos.toArray().forEach(field => {
-  			var line = `${field.Id}${separator}`;
-  			csv = csv.concat(line);
-  		});
-  		//Remove last comma
-  		csv = csv.replace(/,\s*$/, "");
-  		csv = csv.concat("\r\n");
-  		this.Records.toArray().forEach(recordData => {
-  			//Add index
-				//console.log("RECORD DATA:", recordData);
-  			var line = `${this.Records.indexOf(recordData)}${separator}`;
-  			csv = csv.concat(line);
-				//recordData.RecordInfo.Fields.toArray().forEach(test => {
-				//	console.log("RECORD INFO FIELD: ", test);
-				//})
-  			//Add fields
-  			recordData.FieldsData.toArray().forEach(fieldData => {
-  				var line = `${this.getCsvString(fieldData)}${separator}`;
-					//console.log("FIELD DATA: ", fieldData);
-  				csv = csv.concat(line);
-  			});
-  			csv = csv.replace(/,\s*$/, "");
-  			csv = csv.concat("\r\n");
-
-  		});
-  		csv = csv.replace(/,\s*$/, "");
-  		csv = csv.concat("\r\n");
-    }
-		return csv;
-	}
-
-	getCsvString(fieldData:FieldData){
-		var str = fieldData.Data.GetValueString();
-		var match = new RegExp(/(?:\r|\n|,)/gm)
-		if(match.test(str)){
-			var replacement = str.replace("\"", "\"\"");
-			str = `\"${replacement}\"`
-		}
-		return str;
 	}
 }

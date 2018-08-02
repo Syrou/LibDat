@@ -4,6 +4,6 @@ import FieldInfo from "./FieldInfo";
 export default class FieldData {
     Data: AbstractData;
     FieldInfo: FieldInfo;
-    constructor(fieldInfo: FieldInfo, reader: BinaryReader);
+    constructor(fieldInfo: FieldInfo, reader: BinaryReader, fieldIndex: Number);
     GetOffsetPrefix(): string;
 }

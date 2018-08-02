@@ -9,10 +9,10 @@ class RecordData {
         this.FieldsData = new List_1.default();
         inStream.seek(4 + recordInfo.Length * index);
         let startOffset = inStream.position();
-        this.RecordInfo.Fields.toArray().forEach(element => {
+        this.RecordInfo.Fields.toArray().forEach((element, fieldIndex) => {
             var elementOffset = (startOffset + element.RecordOffset);
             inStream.seek(elementOffset);
-            var fieldData = new FieldData_1.default(element, inStream);
+            var fieldData = new FieldData_1.default(element, inStream, fieldIndex);
             this.FieldsData.add(fieldData);
             fieldData = null;
         });

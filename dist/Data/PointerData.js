@@ -15,7 +15,7 @@ class PointerData extends AbstractData_1.default {
         this.Offset = options.getValue("offset");
         reader.seek(DatContainer_1.DatContainer.DataSectionOffset + this.Offset);
         var refParams = this.RefType.ReadPointer(reader);
-        this.RefData = TypeFactory_1.default.CreateData(this.RefType, reader, refParams);
+        this.RefData = TypeFactory_1.default.CreateData(this.RefType, reader, refParams, -1);
         DatContainer_1.DatContainer.DataPointers.setValue(this.Offset, this);
     }
     GetValueString() {

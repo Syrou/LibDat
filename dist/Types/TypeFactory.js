@@ -57,6 +57,7 @@ class TypeFactory {
         if (type !== null || type !== undefined) {
             this._types.setValue(fieldType, type);
         }
+        this.lastSuccessfullyParsedType = type;
         return type;
     }
     static ParseValueType(fieldType) {
@@ -92,7 +93,14 @@ class TypeFactory {
         }
         throw new Error(`Could not find value for type: ${type}`);
     }
-    static CreateData(type, inStream, options) {
+    static CreateData(type, inStream, options, fieldIndex) {
+        if (fieldIndex) {
+            this.currentFieldIndex = fieldIndex;
+        }
+        if (inStream.position() > inStream.buffer.capacity()) {
+            var error = `Trying to read outside record length, this usually indicates records being assigned to wrong type!\nType was: ${this.lastSuccessfullyParsedType.Name} found at field entry number: ${this.currentFieldIndex}`;
+            throw new Error(error);
+        }
         if (type instanceof ListDataType_1.ListDataType) {
             return new ListData_1.default(type, inStream, options);
         }

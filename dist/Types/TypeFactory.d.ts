@@ -3,6 +3,8 @@ import { BaseDataType } from './BaseDataType';
 import AbstractData from '../Data/AbstractData';
 import Dictionary from '../Dictionary';
 export default class TypeFactory {
+    static lastSuccessfullyParsedType: BaseDataType;
+    static currentFieldIndex: Number;
     static _types: Dictionary<string, BaseDataType>;
     static GetDataSectionOffset(reader: BinaryReader): number;
     static ParseType(fieldType: string): BaseDataType;
@@ -10,5 +12,5 @@ export default class TypeFactory {
     static LoadValueTypes(): void;
     private static HasTypeInfo;
     private static GetTypeInfo;
-    static CreateData(type: BaseDataType, inStream: BinaryReader, options: Dictionary<string, any>): AbstractData;
+    static CreateData(type: BaseDataType, inStream: BinaryReader, options: Dictionary<string, any>, fieldIndex: Number): AbstractData;
 }
