@@ -105,7 +105,7 @@ class DatContainer {
         });
     }
     SaveToJson() {
-        console.log("Converting Records to JSON...");
+        console.log(`Converting Records for file: ${this.DatName} to JSON...`);
         var pathToCreate = path.join(this.Path, "json");
         mkdirp.sync(pathToCreate);
         var jsonPath = `${this.Path}/json/${this.DatName}.json`;
