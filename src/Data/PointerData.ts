@@ -22,13 +22,10 @@ export default class PointerData extends AbstractData
 		this.RefType = dataType.RefType;
 		this.Length = this.RefType.PointerWidth;
 		this.Offset = options.getValue("offset");
-
 		reader.seek(DatContainer.DataSectionOffset + this.Offset);
 
 		var refParams = this.RefType.ReadPointer(reader);
-		this.RefData = TypeFactory.CreateData(this.RefType, reader, refParams, -1);
-
-		DatContainer.DataPointers.setValue(this.Offset, this);
+		this.RefData = TypeFactory.CreateData(this.RefType, reader, refParams, 1);
 	}
 
 	GetValueString(): string

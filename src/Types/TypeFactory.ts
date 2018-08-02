@@ -103,7 +103,7 @@ export default class TypeFactory {
        throw new Error(`Could not find value for type: ${type}`)
    }
 
-   public static CreateData(type:BaseDataType, inStream:BinaryReader, options:Dictionary<string, any>, fieldIndex:Number):AbstractData{
+   public static CreateData(type:BaseDataType, inStream:BinaryReader, options:Dictionary<string, any>, fieldIndex:number):AbstractData{
         if(fieldIndex){
          this.currentFieldIndex = fieldIndex;
         }

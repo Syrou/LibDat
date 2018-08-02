@@ -42,7 +42,7 @@ export default class RecordFactory {
         var index = 0;
         var totalLength = 0;
         if(object.fields && object.fields.length > 0){
-          object.fields.forEach((field:any, iteration:Number) => {
+          object.fields.forEach((field:any, iteration:number) => {
                   var fieldId = field.id;
                   if(isNullOrUndefined(fieldId)){
                       throw new Error(`Invalid Json: field with index ${iteration} has no 'id'`);

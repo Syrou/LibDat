@@ -1,7 +1,7 @@
 export default class Dictionary<K, V>{
-    map:Map<K, V> = new Map<K, V>()
+    map:Map<K, V>
     constructor(){
-
+      this.map = new Map<K, V>()
     }
 
     setValue(key:K, value:V){
@@ -12,7 +12,7 @@ export default class Dictionary<K, V>{
         this.map.delete(key);
     }
 
-    getValue(key:K){
+    getValue(key:K):V | undefined {
         return this.map.get(key);
     }
 
@@ -20,7 +20,7 @@ export default class Dictionary<K, V>{
         return this.map.has(key);
     }
 
-    size():Number{
+    size():number{
       return this.map.size;
     }
 }

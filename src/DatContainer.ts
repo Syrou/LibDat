@@ -30,8 +30,6 @@ export class DatContainer {
 	DataSectionDataLength:number = 0;
 	private _originalData!: ByteBuffer;
 	Records!: List<RecordData>;
-	static DataEntries: Dictionary<number, AbstractData>
-	static DataPointers: Dictionary<number, PointerData>
 
 	constructor(directory:string,filePath:string, x: (instance:DatContainer) => void){
 			if(filePath !== undefined && filePath.length > 0){
@@ -47,8 +45,6 @@ export class DatContainer {
       					throw new Error(errorString)
       				}
       				this.RecordInfo = recordGuard;
-      				DatContainer.DataEntries = new Dictionary<number, AbstractData>();
-      				DatContainer.DataPointers = new Dictionary<number, PointerData>();
               var fileToRead = `${directory}/${filePath}`
       				var fileBytes = fs.readFile(fileToRead, (err,data)=>{
       					var br = new BinaryReader(data, true)
@@ -56,7 +52,7 @@ export class DatContainer {
       					x(this);
       				});
         } catch(e) {
-          console.log(e)
+          console.error(e)
         }
 	     }
   }
@@ -68,7 +64,7 @@ export class DatContainer {
 		var errorPath = path.join(this.Directory, "error", `${workingFile}.txt`);
 		fs.writeFile(errorPath, errorString, { flag: 'w' }, function (err) {
 			if (err) throw err;
-			console.log(`Error details saved for file: ${workingFile}`);
+			console.error(`Error details saved for file: ${workingFile}`);
 		});
 	}
 
@@ -85,7 +81,7 @@ export class DatContainer {
 
   		//find record length
   		var actualRecordLength = this.FindRecordLength(inStream, this.Count)
-  		var errorString = `Actual record length = ${actualRecordLength} not equal length by the sum of each record in the xml specification: ${this.RecordInfo.Length}`
+  		var errorString = `Actual record length = ${actualRecordLength} not equal length by the sum of each record in the json specification: ${this.RecordInfo.Length}`
   		if(actualRecordLength != this.RecordInfo.Length){
 				this.SaveError(errorString);
   			throw new Error(errorString);
@@ -129,21 +125,12 @@ export class DatContainer {
 		var jsonToWrite = this.GetJsonFormat();
 		fs.writeFile(jsonPath, jsonToWrite, function(err) {
 			if(err) {
-				return console.log(err);
+				return console.error(err);
 			}
 			//console.log("The file was saved!");
 		});
 		return `/json/${this.DatName}.json`;
 	}
-
-	private constructJson(csv:string):any{
-		const content = csv.split('\r\n');
-		const header = content[0].split(',');
-		return _.tail(content).map((row) => {
-			return _.zipObject(header, row.split(','));
-		});
-	}
-
 	private FindRecordLength(inStream:BinaryReader, numberOfEntries:number):number{
 		if(numberOfEntries === 0){
 			return 0;

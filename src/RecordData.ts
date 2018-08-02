@@ -17,9 +17,13 @@ export default class RecordData{
         this.RecordInfo.Fields.toArray().forEach((element, fieldIndex) => {
             var elementOffset:number = (startOffset + element.RecordOffset);
             inStream.seek(elementOffset);
-            var fieldData:FieldData|null = new FieldData(element, inStream, fieldIndex);
-            this.FieldsData.add(fieldData);
-            fieldData = null;
+            //try {
+              var fieldData:FieldData|null = new FieldData(element, inStream, fieldIndex);
+              this.FieldsData.add(fieldData);
+              fieldData = null;
+            //} catch (e) {
+              //throw Error(" current fieldIndex: "+ fieldIndex + " " + e);
+            //}
         });
     }
 }

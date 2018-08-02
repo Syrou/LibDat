@@ -35,16 +35,6 @@ class RecordFactory {
             var error = `Invalid XML: record has wrong attribute 'id': ${element}`;
             throw new Error(error);
         }
-        //var lengthString = this.GetAttributeValue(element, "length");
-        /*if(isNullOrUndefined(lengthString)){
-            var error = `Invalid XML: record has wrong attribute 'length': ${element}`
-            throw new Error(error);
-        }
-        var length:number = Number(lengthString)
-        if(length === 0){
-            this.Records.setValue(file, new RecordInfo(file));
-            return;
-        }*/
         var fields = new List_1.default();
         var index = 0;
         var totalLength = 0;

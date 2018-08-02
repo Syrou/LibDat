@@ -38,7 +38,7 @@ export default class ListData extends AbstractData
 				var item: AbstractData = TypeFactory.CreateData(this.ListType, reader, dictionary, i);
 				this.List.add(item);
 			}
-			DatContainer.DataEntries.setValue(this.Offset, this);
+			//DatContainer.DataEntries.setValue(this.Offset, this);
 			this.List.clear();
 		}
 	}

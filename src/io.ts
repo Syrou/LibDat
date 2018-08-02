@@ -39,7 +39,7 @@ class BinaryReader {
         var s_Val = this.buffer.readInt8();
         return s_Val;
     }
-    
+
     ReadInt16():number {
         return this.buffer.readInt16();;
     }
@@ -71,19 +71,21 @@ class BinaryReader {
     ReadByte():number{
         return this.buffer.readByte();
     }
-    
+
     ReadBytes(length:number):ByteBuffer {
         return this.buffer.readBytes(length);
     }
 
     ReadString():string{
         var strb = ""
-        var chr;
-        while((chr = this.buffer.readInt16()) != 0){
-            strb = strb.concat(String.fromCharCode(chr))
+        var chr = -1;
+        if(this.position() + 2 < this.buffer.capacity()){
+          while((chr = this.buffer.readInt16()) != 0 ){
+              strb = strb.concat(String.fromCharCode(chr))
+          }
         }
         if(chr != 0){
-            console.log("OOOPS?");
+            throw Error("We were trying to find a string, but found no null terminator, this is probably not a string type");
         }
         return strb
 

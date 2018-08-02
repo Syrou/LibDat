@@ -1,0 +1,778 @@
+[
+	{
+		"Row": 0,
+		"Id": "뮻뮻뮻ㆻ",
+		"ShopPaymentPackageKey": "0",
+		"ShopItemKey": "-1",
+		"Unknown0": "1",
+		"ShopTokenKey": "0"
+	},
+	{
+		"Row": 1,
+		"Id": "뮻뮻뮻1",
+		"ShopPaymentPackageKey": "1",
+		"ShopItemKey": "-1",
+		"Unknown0": "1",
+		"ShopTokenKey": "3"
+	},
+	{
+		"Row": 2,
+		"Id": "뮻뮻ㆻ",
+		"ShopPaymentPackageKey": "1",
+		"ShopItemKey": "-1",
+		"Unknown0": "1",
+		"ShopTokenKey": "0"
+	},
+	{
+		"Row": 3,
+		"Id": "뮻뮻1",
+		"ShopPaymentPackageKey": "1",
+		"ShopItemKey": "-1",
+		"Unknown0": "3",
+		"ShopTokenKey": "8"
+	},
+	{
+		"Row": 4,
+		"Id": "뮻ㆻ",
+		"ShopPaymentPackageKey": "2",
+		"ShopItemKey": "-1",
+		"Unknown0": "1",
+		"ShopTokenKey": "0"
+	},
+	{
+		"Row": 5,
+		"Id": "뮻1",
+		"ShopPaymentPackageKey": "2",
+		"ShopItemKey": "-1",
+		"Unknown0": "2",
+		"ShopTokenKey": "3"
+	},
+	{
+		"Row": 6,
+		"Id": "ㆻ",
+		"ShopPaymentPackageKey": "2",
+		"ShopItemKey": "-1",
+		"Unknown0": "3",
+		"ShopTokenKey": "8"
+	},
+	{
+		"Row": 7,
+		"Id": "1",
+		"ShopPaymentPackageKey": "2",
+		"ShopItemKey": "1170",
+		"Unknown0": "4",
+		"ShopTokenKey": "-1"
+	},
+	{
+		"Row": 8,
+		"Id": "",
+		"ShopPaymentPackageKey": "3",
+		"ShopItemKey": "-1",
+		"Unknown0": "1",
+		"ShopTokenKey": "1"
+	},
+	{
+		"Row": 9,
+		"Id": "",
+		"ShopPaymentPackageKey": "3",
+		"ShopItemKey": "-1",
+		"Unknown0": "1",
+		"ShopTokenKey": "3"
+	},
+	{
+		"Row": 10,
+		"Id": "",
+		"ShopPaymentPackageKey": "3",
+		"ShopItemKey": "-1",
+		"Unknown0": "2",
+		"ShopTokenKey": "4"
+	},
+	{
+		"Row": 11,
+		"Id": "",
+		"ShopPaymentPackageKey": "3",
+		"ShopItemKey": "-1",
+		"Unknown0": "3",
+		"ShopTokenKey": "8"
+	},
+	{
+		"Row": 12,
+		"Id": "㌀",
+		"ShopPaymentPackageKey": "3",
+		"ShopItemKey": "1171",
+		"Unknown0": "4",
+		"ShopTokenKey": "-1"
+	},
+	{
+		"Row": 13,
+		"Id": "3",
+		"ShopPaymentPackageKey": "4",
+		"ShopItemKey": "-1",
+		"Unknown0": "1",
+		"ShopTokenKey": "1"
+	},
+	{
+		"Row": 14,
+		"Id": "",
+		"ShopPaymentPackageKey": "4",
+		"ShopItemKey": "-1",
+		"Unknown0": "1",
+		"ShopTokenKey": "3"
+	},
+	{
+		"Row": 15,
+		"Id": "",
+		"ShopPaymentPackageKey": "4",
+		"ShopItemKey": "-1",
+		"Unknown0": "1",
+		"ShopTokenKey": "4"
+	},
+	{
+		"Row": 16,
+		"Id": "",
+		"ShopPaymentPackageKey": "4",
+		"ShopItemKey": "-1",
+		"Unknown0": "2",
+		"ShopTokenKey": "5"
+	},
+	{
+		"Row": 17,
+		"Id": "",
+		"ShopPaymentPackageKey": "4",
+		"ShopItemKey": "-1",
+		"Unknown0": "3",
+		"ShopTokenKey": "8"
+	},
+	{
+		"Row": 18,
+		"Id": "㈀",
+		"ShopPaymentPackageKey": "4",
+		"ShopItemKey": "1172",
+		"Unknown0": "4",
+		"ShopTokenKey": "-1"
+	},
+	{
+		"Row": 19,
+		"Id": "2",
+		"ShopPaymentPackageKey": "4",
+		"ShopItemKey": "-1",
+		"Unknown0": "5",
+		"ShopTokenKey": "9"
+	},
+	{
+		"Row": 20,
+		"Id": "",
+		"ShopPaymentPackageKey": "4",
+		"ShopItemKey": "-1",
+		"Unknown0": "6",
+		"ShopTokenKey": "10"
+	},
+	{
+		"Row": 21,
+		"Id": "",
+		"ShopPaymentPackageKey": "4",
+		"ShopItemKey": "-1",
+		"Unknown0": "7",
+		"ShopTokenKey": "11"
+	},
+	{
+		"Row": 22,
+		"Id": "",
+		"ShopPaymentPackageKey": "5",
+		"ShopItemKey": "-1",
+		"Unknown0": "1",
+		"ShopTokenKey": "2"
+	},
+	{
+		"Row": 23,
+		"Id": "",
+		"ShopPaymentPackageKey": "5",
+		"ShopItemKey": "-1",
+		"Unknown0": "2",
+		"ShopTokenKey": "3"
+	},
+	{
+		"Row": 24,
+		"Id": "㐀",
+		"ShopPaymentPackageKey": "5",
+		"ShopItemKey": "-1",
+		"Unknown0": "2",
+		"ShopTokenKey": "4"
+	},
+	{
+		"Row": 25,
+		"Id": "4",
+		"ShopPaymentPackageKey": "5",
+		"ShopItemKey": "-1",
+		"Unknown0": "2",
+		"ShopTokenKey": "5"
+	},
+	{
+		"Row": 26,
+		"Id": "",
+		"ShopPaymentPackageKey": "5",
+		"ShopItemKey": "-1",
+		"Unknown0": "2",
+		"ShopTokenKey": "6"
+	},
+	{
+		"Row": 27,
+		"Id": "",
+		"ShopPaymentPackageKey": "5",
+		"ShopItemKey": "-1",
+		"Unknown0": "3",
+		"ShopTokenKey": "8"
+	},
+	{
+		"Row": 28,
+		"Id": "",
+		"ShopPaymentPackageKey": "5",
+		"ShopItemKey": "1173",
+		"Unknown0": "4",
+		"ShopTokenKey": "-1"
+	},
+	{
+		"Row": 29,
+		"Id": "",
+		"ShopPaymentPackageKey": "5",
+		"ShopItemKey": "-1",
+		"Unknown0": "5",
+		"ShopTokenKey": "10"
+	},
+	{
+		"Row": 30,
+		"Id": "㔀",
+		"ShopPaymentPackageKey": "5",
+		"ShopItemKey": "-1",
+		"Unknown0": "6",
+		"ShopTokenKey": "11"
+	},
+	{
+		"Row": 31,
+		"Id": "5",
+		"ShopPaymentPackageKey": "5",
+		"ShopItemKey": "-1",
+		"Unknown0": "7",
+		"ShopTokenKey": "9"
+	},
+	{
+		"Row": 32,
+		"Id": "",
+		"ShopPaymentPackageKey": "5",
+		"ShopItemKey": "-1",
+		"Unknown0": "8",
+		"ShopTokenKey": "12"
+	},
+	{
+		"Row": 33,
+		"Id": "",
+		"ShopPaymentPackageKey": "5",
+		"ShopItemKey": "-1",
+		"Unknown0": "9",
+		"ShopTokenKey": "13"
+	},
+	{
+		"Row": 34,
+		"Id": "",
+		"ShopPaymentPackageKey": "5",
+		"ShopItemKey": "-1",
+		"Unknown0": "10",
+		"ShopTokenKey": "14"
+	},
+	{
+		"Row": 35,
+		"Id": "",
+		"ShopPaymentPackageKey": "6",
+		"ShopItemKey": "-1",
+		"Unknown0": "1",
+		"ShopTokenKey": "2"
+	},
+	{
+		"Row": 36,
+		"Id": "㘀",
+		"ShopPaymentPackageKey": "6",
+		"ShopItemKey": "-1",
+		"Unknown0": "2",
+		"ShopTokenKey": "3"
+	},
+	{
+		"Row": 37,
+		"Id": "6",
+		"ShopPaymentPackageKey": "6",
+		"ShopItemKey": "-1",
+		"Unknown0": "2",
+		"ShopTokenKey": "4"
+	},
+	{
+		"Row": 38,
+		"Id": "",
+		"ShopPaymentPackageKey": "6",
+		"ShopItemKey": "-1",
+		"Unknown0": "2",
+		"ShopTokenKey": "5"
+	},
+	{
+		"Row": 39,
+		"Id": "",
+		"ShopPaymentPackageKey": "6",
+		"ShopItemKey": "-1",
+		"Unknown0": "2",
+		"ShopTokenKey": "6"
+	},
+	{
+		"Row": 40,
+		"Id": "",
+		"ShopPaymentPackageKey": "6",
+		"ShopItemKey": "-1",
+		"Unknown0": "2",
+		"ShopTokenKey": "7"
+	},
+	{
+		"Row": 41,
+		"Id": "",
+		"ShopPaymentPackageKey": "6",
+		"ShopItemKey": "-1",
+		"Unknown0": "3",
+		"ShopTokenKey": "8"
+	},
+	{
+		"Row": 42,
+		"Id": "㜀",
+		"ShopPaymentPackageKey": "6",
+		"ShopItemKey": "1174",
+		"Unknown0": "4",
+		"ShopTokenKey": "-1"
+	},
+	{
+		"Row": 43,
+		"Id": "7",
+		"ShopPaymentPackageKey": "6",
+		"ShopItemKey": "-1",
+		"Unknown0": "5",
+		"ShopTokenKey": "10"
+	},
+	{
+		"Row": 44,
+		"Id": "",
+		"ShopPaymentPackageKey": "6",
+		"ShopItemKey": "-1",
+		"Unknown0": "6",
+		"ShopTokenKey": "11"
+	},
+	{
+		"Row": 45,
+		"Id": "",
+		"ShopPaymentPackageKey": "6",
+		"ShopItemKey": "-1",
+		"Unknown0": "7",
+		"ShopTokenKey": "9"
+	},
+	{
+		"Row": 46,
+		"Id": "",
+		"ShopPaymentPackageKey": "6",
+		"ShopItemKey": "-1",
+		"Unknown0": "8",
+		"ShopTokenKey": "12"
+	},
+	{
+		"Row": 47,
+		"Id": "",
+		"ShopPaymentPackageKey": "6",
+		"ShopItemKey": "-1",
+		"Unknown0": "9",
+		"ShopTokenKey": "13"
+	},
+	{
+		"Row": 48,
+		"Id": "㠀",
+		"ShopPaymentPackageKey": "6",
+		"ShopItemKey": "-1",
+		"Unknown0": "10",
+		"ShopTokenKey": "14"
+	},
+	{
+		"Row": 49,
+		"Id": "8",
+		"ShopPaymentPackageKey": "6",
+		"ShopItemKey": "-1",
+		"Unknown0": "11",
+		"ShopTokenKey": "15"
+	},
+	{
+		"Row": 50,
+		"Id": "",
+		"ShopPaymentPackageKey": "6",
+		"ShopItemKey": "-1",
+		"Unknown0": "12",
+		"ShopTokenKey": "16"
+	},
+	{
+		"Row": 51,
+		"Id": "",
+		"ShopPaymentPackageKey": "14",
+		"ShopItemKey": "-1",
+		"Unknown0": "1",
+		"ShopTokenKey": "17"
+	},
+	{
+		"Row": 52,
+		"Id": "",
+		"ShopPaymentPackageKey": "14",
+		"ShopItemKey": "-1",
+		"Unknown0": "2",
+		"ShopTokenKey": "8"
+	},
+	{
+		"Row": 53,
+		"Id": "",
+		"ShopPaymentPackageKey": "14",
+		"ShopItemKey": "969",
+		"Unknown0": "3",
+		"ShopTokenKey": "-1"
+	},
+	{
+		"Row": 54,
+		"Id": "㤀",
+		"ShopPaymentPackageKey": "15",
+		"ShopItemKey": "-1",
+		"Unknown0": "1",
+		"ShopTokenKey": "17"
+	},
+	{
+		"Row": 55,
+		"Id": "9",
+		"ShopPaymentPackageKey": "15",
+		"ShopItemKey": "-1",
+		"Unknown0": "1",
+		"ShopTokenKey": "18"
+	},
+	{
+		"Row": 56,
+		"Id": "",
+		"ShopPaymentPackageKey": "15",
+		"ShopItemKey": "-1",
+		"Unknown0": "2",
+		"ShopTokenKey": "8"
+	},
+	{
+		"Row": 57,
+		"Id": "",
+		"ShopPaymentPackageKey": "15",
+		"ShopItemKey": "965",
+		"Unknown0": "3",
+		"ShopTokenKey": "-1"
+	},
+	{
+		"Row": 58,
+		"Id": "",
+		"ShopPaymentPackageKey": "15",
+		"ShopItemKey": "970",
+		"Unknown0": "4",
+		"ShopTokenKey": "-1"
+	},
+	{
+		"Row": 59,
+		"Id": "",
+		"ShopPaymentPackageKey": "15",
+		"ShopItemKey": "969",
+		"Unknown0": "5",
+		"ShopTokenKey": "-1"
+	},
+	{
+		"Row": 60,
+		"Id": "㄀　",
+		"ShopPaymentPackageKey": "16",
+		"ShopItemKey": "-1",
+		"Unknown0": "1",
+		"ShopTokenKey": "17"
+	},
+	{
+		"Row": 61,
+		"Id": "10",
+		"ShopPaymentPackageKey": "16",
+		"ShopItemKey": "-1",
+		"Unknown0": "1",
+		"ShopTokenKey": "18"
+	},
+	{
+		"Row": 62,
+		"Id": "　",
+		"ShopPaymentPackageKey": "16",
+		"ShopItemKey": "-1",
+		"Unknown0": "1",
+		"ShopTokenKey": "19"
+	},
+	{
+		"Row": 63,
+		"Id": "0",
+		"ShopPaymentPackageKey": "16",
+		"ShopItemKey": "-1",
+		"Unknown0": "2",
+		"ShopTokenKey": "8"
+	},
+	{
+		"Row": 64,
+		"Id": "",
+		"ShopPaymentPackageKey": "16",
+		"ShopItemKey": "966",
+		"Unknown0": "3",
+		"ShopTokenKey": "-1"
+	},
+	{
+		"Row": 65,
+		"Id": "",
+		"ShopPaymentPackageKey": "16",
+		"ShopItemKey": "971",
+		"Unknown0": "4",
+		"ShopTokenKey": "-1"
+	},
+	{
+		"Row": 66,
+		"Id": "",
+		"ShopPaymentPackageKey": "16",
+		"ShopItemKey": "969",
+		"Unknown0": "5",
+		"ShopTokenKey": "-1"
+	},
+	{
+		"Row": 67,
+		"Id": "",
+		"ShopPaymentPackageKey": "16",
+		"ShopItemKey": "-1",
+		"Unknown0": "6",
+		"ShopTokenKey": "23"
+	},
+	{
+		"Row": 68,
+		"Id": "㄀㄀",
+		"ShopPaymentPackageKey": "16",
+		"ShopItemKey": "-1",
+		"Unknown0": "7",
+		"ShopTokenKey": "24"
+	},
+	{
+		"Row": 69,
+		"Id": "11",
+		"ShopPaymentPackageKey": "16",
+		"ShopItemKey": "-1",
+		"Unknown0": "8",
+		"ShopTokenKey": "25"
+	},
+	{
+		"Row": 70,
+		"Id": "㄀",
+		"ShopPaymentPackageKey": "17",
+		"ShopItemKey": "-1",
+		"Unknown0": "1",
+		"ShopTokenKey": "17"
+	},
+	{
+		"Row": 71,
+		"Id": "1",
+		"ShopPaymentPackageKey": "17",
+		"ShopItemKey": "-1",
+		"Unknown0": "1",
+		"ShopTokenKey": "18"
+	},
+	{
+		"Row": 72,
+		"Id": "",
+		"ShopPaymentPackageKey": "17",
+		"ShopItemKey": "-1",
+		"Unknown0": "1",
+		"ShopTokenKey": "19"
+	},
+	{
+		"Row": 73,
+		"Id": "",
+		"ShopPaymentPackageKey": "17",
+		"ShopItemKey": "-1",
+		"Unknown0": "1",
+		"ShopTokenKey": "20"
+	},
+	{
+		"Row": 74,
+		"Id": "",
+		"ShopPaymentPackageKey": "17",
+		"ShopItemKey": "-1",
+		"Unknown0": "2",
+		"ShopTokenKey": "8"
+	},
+	{
+		"Row": 75,
+		"Id": "",
+		"ShopPaymentPackageKey": "17",
+		"ShopItemKey": "967",
+		"Unknown0": "3",
+		"ShopTokenKey": "-1"
+	},
+	{
+		"Row": 76,
+		"Id": "㄀㈀",
+		"ShopPaymentPackageKey": "17",
+		"ShopItemKey": "972",
+		"Unknown0": "4",
+		"ShopTokenKey": "-1"
+	},
+	{
+		"Row": 77,
+		"Id": "12",
+		"ShopPaymentPackageKey": "17",
+		"ShopItemKey": "969",
+		"Unknown0": "5",
+		"ShopTokenKey": "-1"
+	},
+	{
+		"Row": 78,
+		"Id": "㈀",
+		"ShopPaymentPackageKey": "17",
+		"ShopItemKey": "-1",
+		"Unknown0": "6",
+		"ShopTokenKey": "23"
+	},
+	{
+		"Row": 79,
+		"Id": "2",
+		"ShopPaymentPackageKey": "17",
+		"ShopItemKey": "-1",
+		"Unknown0": "7",
+		"ShopTokenKey": "9"
+	},
+	{
+		"Row": 80,
+		"Id": "",
+		"ShopPaymentPackageKey": "17",
+		"ShopItemKey": "-1",
+		"Unknown0": "8",
+		"ShopTokenKey": "24"
+	},
+	{
+		"Row": 81,
+		"Id": "",
+		"ShopPaymentPackageKey": "17",
+		"ShopItemKey": "-1",
+		"Unknown0": "9",
+		"ShopTokenKey": "25"
+	},
+	{
+		"Row": 82,
+		"Id": "",
+		"ShopPaymentPackageKey": "17",
+		"ShopItemKey": "-1",
+		"Unknown0": "10",
+		"ShopTokenKey": "14"
+	},
+	{
+		"Row": 83,
+		"Id": "",
+		"ShopPaymentPackageKey": "18",
+		"ShopItemKey": "-1",
+		"Unknown0": "1",
+		"ShopTokenKey": "17"
+	},
+	{
+		"Row": 84,
+		"Id": "㄀㜀",
+		"ShopPaymentPackageKey": "18",
+		"ShopItemKey": "-1",
+		"Unknown0": "1",
+		"ShopTokenKey": "18"
+	},
+	{
+		"Row": 85,
+		"Id": "17",
+		"ShopPaymentPackageKey": "18",
+		"ShopItemKey": "-1",
+		"Unknown0": "1",
+		"ShopTokenKey": "19"
+	},
+	{
+		"Row": 86,
+		"Id": "㜀",
+		"ShopPaymentPackageKey": "18",
+		"ShopItemKey": "-1",
+		"Unknown0": "1",
+		"ShopTokenKey": "20"
+	},
+	{
+		"Row": 87,
+		"Id": "7",
+		"ShopPaymentPackageKey": "18",
+		"ShopItemKey": "-1",
+		"Unknown0": "1",
+		"ShopTokenKey": "21"
+	},
+	{
+		"Row": 88,
+		"Id": "",
+		"ShopPaymentPackageKey": "18",
+		"ShopItemKey": "-1",
+		"Unknown0": "2",
+		"ShopTokenKey": "8"
+	},
+	{
+		"Row": 89,
+		"Id": "",
+		"ShopPaymentPackageKey": "18",
+		"ShopItemKey": "968",
+		"Unknown0": "3",
+		"ShopTokenKey": "-1"
+	},
+	{
+		"Row": 90,
+		"Id": "",
+		"ShopPaymentPackageKey": "18",
+		"ShopItemKey": "973",
+		"Unknown0": "4",
+		"ShopTokenKey": "-1"
+	},
+	{
+		"Row": 91,
+		"Id": "",
+		"ShopPaymentPackageKey": "18",
+		"ShopItemKey": "969",
+		"Unknown0": "5",
+		"ShopTokenKey": "-1"
+	},
+	{
+		"Row": 92,
+		"Id": "㄀㠀",
+		"ShopPaymentPackageKey": "18",
+		"ShopItemKey": "-1",
+		"Unknown0": "6",
+		"ShopTokenKey": "23"
+	},
+	{
+		"Row": 93,
+		"Id": "18",
+		"ShopPaymentPackageKey": "18",
+		"ShopItemKey": "-1",
+		"Unknown0": "7",
+		"ShopTokenKey": "9"
+	},
+	{
+		"Row": 94,
+		"Id": "㠀",
+		"ShopPaymentPackageKey": "18",
+		"ShopItemKey": "-1",
+		"Unknown0": "8",
+		"ShopTokenKey": "26"
+	},
+	{
+		"Row": 95,
+		"Id": "8",
+		"ShopPaymentPackageKey": "18",
+		"ShopItemKey": "-1",
+		"Unknown0": "9",
+		"ShopTokenKey": "24"
+	},
+	{
+		"Row": 96,
+		"Id": "",
+		"ShopPaymentPackageKey": "18",
+		"ShopItemKey": "-1",
+		"Unknown0": "10",
+		"ShopTokenKey": "25"
+	}
+]
