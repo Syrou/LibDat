@@ -85,7 +85,7 @@ class DatContainer {
             }
             this.Records = new List_1.default();
             for (var i = 0; i < this.Count; i++) {
-                console.log("Processing record index:", i, " out of:", this.Count);
+                //console.log("Processing record index:", i, " out of:", this.Count);
                 var recordData = new RecordData_1.default(this.RecordInfo, inStream, i);
                 this.Records.add(recordData);
                 recordData = null;
@@ -101,7 +101,7 @@ class DatContainer {
             if (err) {
                 return console.log(err);
             }
-            console.log("The file was saved!");
+            //console.log("The file was saved!");
         });
     }
     SaveToJson() {
@@ -114,7 +114,7 @@ class DatContainer {
             if (err) {
                 return console.log(err);
             }
-            console.log("The file was saved!");
+            //console.log("The file was saved!");
         });
         return `/json/${this.DatName}.json`;
     }
