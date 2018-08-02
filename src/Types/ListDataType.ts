@@ -13,10 +13,11 @@ export class ListDataType extends BaseDataType
 	ReadPointer(reader: BinaryReader): Dictionary<string, any>
 	{
 		var dictionary: Dictionary<string, any> = new Dictionary<string, any>();
-		var num: number = reader.ReadInt32();
-		var num2: number = reader.ReadInt32();
-		dictionary.setValue("count", num);
-		dictionary.setValue("offset", num2);
+		var count: number = reader.ReadInt32();
+		var offset: number = reader.ReadInt32();
+		console.log("COUNT: ", count, " OFFSET: ", offset, "BUFFER POSITION: ", reader.position());
+		dictionary.setValue("count", count);
+		dictionary.setValue("offset", offset);
 		return dictionary;
 	}
 }

@@ -17,6 +17,7 @@ export class BaseDataType
 		var dictionary: Dictionary<string, any> = new Dictionary<string, any>();
 		var offset: number = reader.ReadInt32();
 		dictionary.setValue("offset", offset);
+		console.log("OFFSET: ", offset, "BUFFER POSITION: ", reader.position());
 		return dictionary;
 	}
 }

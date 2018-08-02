@@ -9,10 +9,11 @@ class ListDataType extends BaseDataType_1.BaseDataType {
     }
     ReadPointer(reader) {
         var dictionary = new Dictionary_1.default();
-        var num = reader.ReadInt32();
-        var num2 = reader.ReadInt32();
-        dictionary.setValue("count", num);
-        dictionary.setValue("offset", num2);
+        var count = reader.ReadInt32();
+        var offset = reader.ReadInt32();
+        console.log("COUNT: ", count, " OFFSET: ", offset, "BUFFER POSITION: ", reader.position());
+        dictionary.setValue("count", count);
+        dictionary.setValue("offset", offset);
         return dictionary;
     }
 }
