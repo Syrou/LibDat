@@ -109,7 +109,7 @@ export class DatContainer {
 
   		this.Records = new List<RecordData>();
   		for(var i=0; i < this.Count; i++){
-  			console.log("Processing record index:", i, " out of:", this.Count);
+  			//console.log("Processing record index:", i, " out of:", this.Count);
   			var recordData:RecordData|null = new RecordData(this.RecordInfo, inStream, i);
   			this.Records.add(recordData);
   			recordData = null
@@ -126,7 +126,7 @@ export class DatContainer {
 			if(err) {
 				return console.log(err);
 			}
-			console.log("The file was saved!");
+			//console.log("The file was saved!");
 		});
 	}
 
@@ -140,7 +140,7 @@ export class DatContainer {
 			if(err) {
 				return console.log(err);
 			}
-			console.log("The file was saved!");
+			//console.log("The file was saved!");
 		});
 		return `/json/${this.DatName}.json`;
 	}
