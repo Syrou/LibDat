@@ -5,7 +5,7 @@ import Dictionary from '../Dictionary'
 import { DatContainer } from "../DatContainer";
 
 export default class UInt32Data extends AbstractData{
-    
+
     Value:number;
     constructor(type:BaseDataType, reader:BinaryReader, options:Dictionary<string, any>){
         super(type)
@@ -20,7 +20,7 @@ export default class UInt32Data extends AbstractData{
         this.Length = type.Width;
     }
 
-    GetValueString(){
-        return this.Value == -16843010 ? "-1" : this.Value.toString();
+    GetValueString():number{
+        return this.Value == -16843010 ? -1 : Number(this.Value.toString());
     }
 }

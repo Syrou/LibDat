@@ -6,7 +6,7 @@ import { DatContainer } from "../DatContainer";
 import * as Long from "long"
 
 export default class Int64Data extends AbstractData{
-    
+
     Value:Long;
     constructor(type:BaseDataType, reader:BinaryReader, options:Dictionary<string, any>){
         super(type)
@@ -21,7 +21,7 @@ export default class Int64Data extends AbstractData{
         this.Length = type.Width;
     }
 
-    GetValueString(){
-        return this.Value == Long.fromValue("-72340172838076674") ? "-1" : this.Value.toString();
+    GetValueString():number{
+        return this.Value == Long.fromValue("-72340172838076674") ? Number("-1") : Number(this.Value.toString());
     }
 }

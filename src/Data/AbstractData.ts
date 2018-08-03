@@ -8,7 +8,7 @@ import { BinaryWriter } from '../io'
   	constructor(type: BaseDataType) {
   		this.Type = type;
   	}
-  	GetValueString(): string {
+  	GetValueString(): any {
   		throw new Error("Not implemented");
   	}
 }

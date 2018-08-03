@@ -22,6 +22,6 @@ export default class FloatData extends AbstractData{
     }
 
     GetValueString(){
-        return this.Value == -16843010 ? "-1" : this.Value.toString();
+        return this.Value == -16843010 ? "-1" : String(this.Value);
     }
 }

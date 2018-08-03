@@ -110,7 +110,7 @@ export default class TypeFactory {
           this.currentFieldIndex = fieldIndex;
         }
         var optionsOffset:number = options.getValue("offset");
-        if(inStream.position() + optionsOffset > inStream.buffer.capacity()){
+        if((inStream.position() - optionsOffset) + optionsOffset > inStream.buffer.capacity()){
           var error = `Trying to read outside record length, this usually indicates records being assigned to wrong type!\nType was: ${this.lastSuccessfullyParsedType.Name} found at field entry number: ${this.currentFieldIndex}`;
           throw new Error(error);
         }

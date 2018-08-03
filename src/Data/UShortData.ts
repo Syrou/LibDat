@@ -5,7 +5,7 @@ import Dictionary from '../Dictionary'
 import { DatContainer } from "../DatContainer";
 
 export default class UShortData extends AbstractData{
-    
+
     Value:number;
     constructor(type:BaseDataType, reader:BinaryReader, options:Dictionary<string, any>){
         super(type)
@@ -20,7 +20,7 @@ export default class UShortData extends AbstractData{
         this.Length = type.Width;
     }
 
-    GetValueString(){
-        return this.Value.toString();
+    GetValueString():number{
+        return Number(this.Value);
     }
 }
