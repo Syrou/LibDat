@@ -22,6 +22,8 @@ class PointerData extends AbstractData_1.default {
         }
         else {
             console.error("Trying to read outside data section, usually an indicator that the specificed type is not a ref| type");
+            //console.log("DATA SECTION: ", DatContainer.DataSectionOffset);
+            //console.log("READER OFFSET:", readPointerOffset, " POSITION: ", reader.position(), " CAP: ", reader.buffer.capacity());
         }
     }
     GetValueString() {

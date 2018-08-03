@@ -6640,11 +6640,11 @@
                   "type":"int"
                },
                {
-                  "id":"ActorIndex",
+                  "id":"ACTFile",
                   "type":"ref|string"
                },
                {
-                  "id":"AnimatedObjectIndex",
+                  "id":"AOFile",
                   "type":"ref|string"
                },
                {
@@ -6656,15 +6656,15 @@
                   "type":"ref|list|ulong"
                },
                {
-                  "id":"Unknown12",
+                  "id":"Unknown1",
                   "type":"int"
                },
                {
-                  "id":"Unknown13",
+                  "id":"UnknownIndex0",
                   "type":"ref|string"
                },
                {
-                  "id":"Unknown14",
+                  "id":"UnknownIndex1",
                   "type":"ref|string"
                },
                {
@@ -6672,23 +6672,23 @@
                   "type":"int"
                },
                {
-                  "id":"Unknown17",
+                  "id":"Unknown2",
                   "type":"int"
                },
                {
-                  "id":"Unknown18",
+                  "id":"Unknown3",
                   "type":"int"
                },
                {
-                  "id":"Unknown19",
+                  "id":"Unknown4",
                   "type":"int"
                },
                {
-                  "id":"Unknown20",
+                  "id":"Unknown5",
                   "type":"int"
                },
                {
-                  "id":"Unknown22",
+                  "id":"Unknown6",
                   "type":"int"
                },
                {
@@ -6700,19 +6700,19 @@
                   "type":"int"
                },
                {
-                  "id":"Data2",
-                  "type":"ref|list|uint"
+                  "id":"Unknown7",
+                  "type":"ref|list|int"
                },
                {
-                  "id":"Unknown28",
+                  "id":"Unknown8",
                   "type":"int"
                },
                {
-                  "id":"Unknown29",
+                  "id":"Unknown9",
                   "type":"int"
                },
                {
-                  "id":"Unknown30",
+                  "id":"Unknown10",
                   "type":"int"
                },
                {
@@ -6720,12 +6720,13 @@
                   "type":"int"
                },
                {
-                  "id":"Unknown32",
+                  "id":"Unknown11",
                   "type":"int"
                },
                {
                   "id":"GrantedEffectsKeys",
-                  "type":"ref|list|ulong"
+                  "type":"ref|list|ulong",
+                  "key":"GrantedEffects.dat"
                },
                {
                   "id":"AISFile",
@@ -6740,13 +6741,12 @@
                   "type":"ref|string"
                },
                {
-                  "id":"Unknown39",
-                  "type":"long"
+                  "id":"Key2",
+                  "type":"ulong"
                },
                {
                   "id":"Name",
-                  "type":"ref|string",
-                  "isUser":"1"
+                  "type":"ref|string"
                },
                {
                   "id":"DamageMultiplier",
@@ -6770,30 +6770,30 @@
                },
                {
                   "id":"Back_ItemVisualIdentityKey",
-                  "type":"long"
+                  "type":"ulong"
                },
                {
                   "id":"MainHand_ItemClassesKey",
-                  "type":"long"
+                  "type":"ulong"
                },
                {
                   "id":"OffHand_ItemClassesKey",
-                  "type":"long"
+                  "type":"ulong"
                },
                {
-                  "id":"Unknown53",
-                  "type":"long"
+                  "id":"Key1",
+                  "type":"ulong"
                },
                {
                   "id":"Helmet_ItemVisualIdentityKey",
-                  "type":"long"
+                  "type":"ulong"
                },
                {
-                  "id":"Unknown57",
+                  "id":"Unknown13",
                   "type":"int"
                },
                {
-                  "id":"AchievementItemsKeys",
+                  "id":"KillSpecificMonsterCount_AchievementItemsKeys",
                   "type":"ref|list|ulong"
                },
                {
@@ -6801,35 +6801,31 @@
                   "type":"ref|list|ulong"
                },
                {
-                  "id":"AchievementItemsKeys2",
+                  "id":"KillRare_AchievementItemsKeys",
                   "type":"ref|list|ulong"
                },
                {
-                  "id":"Unknown63",
+                  "id":"Flag0",
                   "type":"bool"
                },
                {
-                  "id":"Unknown64",
+                  "id":"Unknown17",
                   "type":"int"
                },
                {
-                  "id":"Unknown65",
+                  "id":"Unknown18",
                   "type":"int"
                },
                {
-                  "id":"Unknown66",
+                  "id":"Unknown19",
                   "type":"int"
                },
                {
-                  "id":"Unknown67",
+                  "id":"Unknown20",
                   "type":"int"
                },
                {
-                  "id":"Unknown68",
-                  "type":"int"
-               },
-               {
-                  "id":"Unknown69",
+                  "id":"Unknown21",
                   "type":"int"
                },
                {
@@ -6837,75 +6833,83 @@
                   "type":"int"
                },
                {
+                  "id":"Unknown71",
+                  "type":"int"
+               },
+               {
+                  "id":"Unknown14",
+                  "type":"byte"
+               },
+               {
                   "id":"Unknown72",
-                  "type":"bool"
+                  "type":"int"
                },
                {
-                  "id":"Unknown73",
-                  "type":"ref|string"
-               },
-               {
-                  "id":"Normal_AchievementItemsKeys",
-                  "type":"ref|list|ulong"
-               },
-               {
-                  "id":"Merciless_AchievementItemsKeys",
-                  "type":"ref|list|ulong"
-               },
-               {
-                  "id":"Cruel_AchievementItemsKeys",
-                  "type":"ref|list|ulong"
-               },
-               {
-                  "id":"FlashbackAchievement",
-                  "type":"long"
+                  "id":"KillWhileOnslaughtIsActive_AchievementItemsKey",
+                  "type":"ulong"
                },
                {
                   "id":"MonsterSegmentsKey",
-                  "type":"long"
+                  "type":"ulong"
                },
                {
                   "id":"MonsterArmoursKey",
-                  "type":"long"
+                  "type":"ulong"
                },
                {
-                  "id":"AchievementItemsKey",
-                  "type":"long"
+                  "id":"KillWhileTalismanIsActive_AchievementItemsKey",
+                  "type":"ulong"
                },
                {
-                  "id":"AchievementItemsKey4",
+                  "id":"MonsterLevel80_AchievementItemsKeys",
                   "type":"ref|list|ulong"
                },
                {
-                  "id":"Normal_ModsKeys",
+                  "id":"Part1_ModsKeys",
                   "type":"ref|list|ulong"
                },
                {
-                  "id":"Cruel_ModsKeys",
+                  "id":"Part2_ModsKeys",
                   "type":"ref|list|ulong"
                },
                {
-                  "id":"Merciless_ModsKeys",
+                  "id":"Endgame_ModsKeys",
                   "type":"ref|list|ulong"
                },
                {
-                  "id":"KillRareInNormal_AchievementItemsKeys",
+                  "id":"Unknown87",
+                  "type":"ref|list|int"
+               },
+               {
+                  "id":"KillRareInPart2_AchievementItemsKeys",
                   "type":"ref|list|long"
                },
                {
-                  "id":"KillRareInCruel_AchievementItemsKeys",
+                  "id":"KillRareInEndgame_AchievementItemsKeys",
                   "type":"ref|list|long"
                },
                {
-                  "id":"KillRareInMerciless_AchievementItemsKeys",
-                  "type":"ref|list|long"
+                  "id":"Key0",
+                  "type":"ulong"
                },
                {
-                  "id":"Key3",
-                  "type":"long"
+                  "id":"KillSpecificMonsterCount2_AchievementItemsKeys",
+                  "type":"ref|list|ulong"
                },
                {
-                  "id":"CountKills_AchievementItemsKeys",
+                  "id":"Unknown99",
+                  "type":"int"
+               },
+               {
+                  "id":"Unknown100",
+                  "type":"int"
+               },
+               {
+                  "id":"Keys0",
+                  "type":"ref|list|ulong"
+               },
+               {
+                  "id":"Keys1",
                   "type":"ref|list|ulong"
                }
             ]
