@@ -11,7 +11,7 @@ import { BaseDataType } from "./Types/BaseDataType";
 export default class FieldData{
     Data:AbstractData
     FieldInfo:FieldInfo
-    constructor(fieldInfo:FieldInfo, reader:BinaryReader, fieldIndex:Number){
+    constructor(fieldInfo:FieldInfo, reader:BinaryReader, fieldIndex:number){
         this.FieldInfo = fieldInfo;
         var offset:number = TypeFactory.GetDataSectionOffset(reader);
         var dictionary = new Dictionary<string, any>();

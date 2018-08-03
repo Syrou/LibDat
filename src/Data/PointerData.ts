@@ -8,7 +8,7 @@ import TypeFactory from "../Types/TypeFactory";
 
 export default class PointerData extends AbstractData
 {
-	public RefData: AbstractData;
+	public RefData: AbstractData|undefined = undefined;
 	public RefType: BaseDataType;
 
 	constructor(dataType:PointerDataType, reader:BinaryReader, options:Dictionary<string, any>)
@@ -21,15 +21,20 @@ export default class PointerData extends AbstractData
 		}
 		this.RefType = dataType.RefType;
 		this.Length = this.RefType.PointerWidth;
-		this.Offset = options.getValue("offset");
+		this.Offset = options.getValue("offset") as number;
 		reader.seek(DatContainer.DataSectionOffset + this.Offset);
-
 		var refParams = this.RefType.ReadPointer(reader);
-		this.RefData = TypeFactory.CreateData(this.RefType, reader, refParams, 1);
+		var readPointerOffset:number = refParams.getValue("offset")
+		if(readPointerOffset >= 8 && reader.position() + readPointerOffset <= reader.buffer.capacity()){
+				this.RefData = TypeFactory.CreateData(this.RefType, reader, refParams, 1);
+		}else{
+			console.error("Trying to read outside data section, usually an indicator that the specificed type is not a ref| type");
+		}
 	}
 
 	GetValueString(): string
 	{
-		return this.RefData.GetValueString();
+		var result:string = this.RefData ? this.RefData.GetValueString() : "";
+		return result;
 	}
 }

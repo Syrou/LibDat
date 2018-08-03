@@ -8814,7 +8814,7 @@
             "fields":[
                {
                   "id":"Id",
-                  "type":"ref|string"
+                  "type":"int"
                },
                {
                   "id":"ShopPaymentPackageKey",

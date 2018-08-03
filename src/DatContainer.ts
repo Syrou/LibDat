@@ -29,6 +29,9 @@ export class DatContainer {
 	static DataSectionOffset:number = 0;
 	DataSectionDataLength:number = 0;
 	private _originalData!: ByteBuffer;
+	static CurrentFieldType:string;
+	static NestedFieldType:string;
+	static CurrentFieldIndex:number;
 	Records!: List<RecordData>;
 
 	constructor(directory:string,filePath:string, x: (instance:DatContainer) => void){
@@ -111,7 +114,7 @@ export class DatContainer {
   			recordData = null
   		}
     } catch(e){
-      console.error(`Error parsing ${this.DatName}`);
+      console.error(`Error parsing ${this.DatName}, at field type: ${DatContainer.NestedFieldType}${DatContainer.CurrentFieldType} field index:${DatContainer.CurrentFieldIndex}`);
 			console.error(e);
     }
 
@@ -164,6 +167,7 @@ export class DatContainer {
 				json = {};
 				json["Row"] = this.Records.indexOf(recordData);
 				recordData.FieldsData.toArray().forEach(fieldData => {
+					//console.log(`KEY: ${fieldData.FieldInfo.Id} -> ${fieldData.Data.GetValueString()}`)
 					json[fieldData.FieldInfo.Id] = fieldData.Data.GetValueString();
 				});
 				jsonArray.push(json);

@@ -8,13 +8,6 @@ import { BinaryWriter } from '../io'
   	constructor(type: BaseDataType) {
   		this.Type = type;
   	}
-  	WritePointer(writer: BinaryWriter): void {
-  		writer.WriteByte(this.Offset);
-  	}
-  	WritePointerOffset(writer: BinaryWriter, NewOffset: number): void {
-  		this.Offset = NewOffset;
-  		writer.WriteByte(this.Offset);
-  	}
   	GetValueString(): string {
   		throw new Error("Not implemented");
   	}

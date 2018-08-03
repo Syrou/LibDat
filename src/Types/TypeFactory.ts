@@ -21,7 +21,7 @@ import BooleanData from '../Data/BooleanData';
 
 export default class TypeFactory {
     static lastSuccessfullyParsedType:BaseDataType;
-    static currentFieldIndex:Number;
+    static currentFieldIndex:number;
     static _types: Dictionary<string, BaseDataType>;
 
    static GetDataSectionOffset(reader:BinaryReader):number{
@@ -104,19 +104,24 @@ export default class TypeFactory {
    }
 
    public static CreateData(type:BaseDataType, inStream:BinaryReader, options:Dictionary<string, any>, fieldIndex:number):AbstractData{
+        DatContainer.CurrentFieldType = type.Name;
         if(fieldIndex){
-         this.currentFieldIndex = fieldIndex;
+          DatContainer.CurrentFieldIndex = fieldIndex;
+          this.currentFieldIndex = fieldIndex;
         }
-        if(inStream.position() > inStream.buffer.capacity()){
+        var optionsOffset:number = options.getValue("offset");
+        if(inStream.position() + optionsOffset > inStream.buffer.capacity()){
           var error = `Trying to read outside record length, this usually indicates records being assigned to wrong type!\nType was: ${this.lastSuccessfullyParsedType.Name} found at field entry number: ${this.currentFieldIndex}`;
           throw new Error(error);
         }
 
         if(type instanceof ListDataType){
+          DatContainer.NestedFieldType = "list|";
             return new ListData(type, inStream, options)
         }
 
         if(type instanceof PointerDataType){
+          DatContainer.NestedFieldType = "ref|";
             return new PointerData(type, inStream, options);
         }
 
@@ -163,6 +168,7 @@ export default class TypeFactory {
                 throw new Error(error);
             }
         }
+        DatContainer.NestedFieldType = "";
         return data;
    }
 }

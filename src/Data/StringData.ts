@@ -19,7 +19,7 @@ export default class StringData extends AbstractData{
         this.Length = 2 * this.Value.length + 4;
     }
 
-    GetValueString(){
-        return this.Value.toString();
+    GetValueString():string{
+        return String(this.Value);
     }
 }
