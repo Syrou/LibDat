@@ -3,7 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const RecordData_1 = require("./RecordData");
 const path = require("path");
 const fs = require("fs");
-const RecordFactory2_1 = require("./RecordFactory2");
+const RecordFactory_1 = require("./RecordFactory");
 const util_1 = require("util");
 const io_1 = require("./io");
 const List_1 = require("./List");
@@ -16,9 +16,9 @@ class DatContainer {
             this.Directory = directory;
             this.DatName = path.basename(filePath, ".dat");
             this.Path = directory;
-            RecordFactory2_1.default.initialize();
+            RecordFactory_1.default.initialize();
             try {
-                var recordGuard = RecordFactory2_1.default.GetRecordInfo(this.DatName);
+                var recordGuard = RecordFactory_1.default.GetRecordInfo(this.DatName);
                 if (util_1.isNullOrUndefined(recordGuard)) {
                     var errorString = `Could not find records for file: ${this.DatName}`;
                     this.SaveError(errorString);

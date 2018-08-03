@@ -8,5 +8,4 @@ export default class RecordFactory {
     static isNullOrEmpty(s: string | undefined): boolean;
     static HasRecordInfo(fileName: string): boolean;
     static GetRecordInfo(datName: string): RecordInfo | undefined;
-    private static GetAttributeValue;
 }
