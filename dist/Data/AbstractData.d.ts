@@ -4,5 +4,5 @@ export default class AbstractData {
     Length: number;
     Type: BaseDataType;
     constructor(type: BaseDataType);
-    GetValueString(): string;
+    GetValueString(): any;
 }

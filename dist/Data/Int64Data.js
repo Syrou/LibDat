@@ -15,7 +15,7 @@ class Int64Data extends AbstractData_1.default {
         this.Length = type.Width;
     }
     GetValueString() {
-        return this.Value == Long.fromValue("-72340172838076674") ? "-1" : this.Value.toString();
+        return this.Value == Long.fromValue("-72340172838076674") ? Number("-1") : Number(this.Value.toString());
     }
 }
 exports.default = Int64Data;

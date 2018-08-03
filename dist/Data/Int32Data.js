@@ -14,7 +14,7 @@ class Int32Data extends AbstractData_1.default {
         this.Length = type.Width;
     }
     GetValueString() {
-        return this.Value == -16843010 ? "-1" : this.Value.toString();
+        return this.Value == -16843010 ? -1 : Number(this.Value.toString());
     }
 }
 exports.default = Int32Data;

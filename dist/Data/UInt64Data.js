@@ -15,7 +15,7 @@ class UInt64Data extends AbstractData_1.default {
         this.Length = type.Width;
     }
     GetValueString() {
-        return this.Value.equals(Long.fromString("-72340172838076674", true)) ? "-1" : this.Value.toString();
+        return this.Value.equals(Long.fromString("-72340172838076674", true)) ? Number("-1") : Number(this.Value.toString());
     }
 }
 exports.default = UInt64Data;

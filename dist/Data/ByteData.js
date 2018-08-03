@@ -14,7 +14,7 @@ class ByteData extends AbstractData_1.default {
         this.Length = type.Width;
     }
     GetValueString() {
-        return this.Value.toString();
+        return String(this.Value);
     }
 }
 exports.default = ByteData;

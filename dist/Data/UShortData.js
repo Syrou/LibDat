@@ -14,7 +14,7 @@ class UShortData extends AbstractData_1.default {
         this.Length = type.Width;
     }
     GetValueString() {
-        return this.Value.toString();
+        return Number(this.Value);
     }
 }
 exports.default = UShortData;

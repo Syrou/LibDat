@@ -29,18 +29,14 @@ class ListData extends AbstractData_1.default {
                 var item = TypeFactory_1.default.CreateData(this.ListType, reader, dictionary, i);
                 this.List.add(item);
             }
-            //DatContainer.DataEntries.setValue(this.Offset, this);
-            this.List.clear();
+            //this.List.clear();
         }
     }
-    WritePointer(writer) {
-        writer.WriteByte(this.Count);
-        writer.WriteByte(this.Offset);
-    }
     GetValueString() {
-        var list = this.List.toArray().filter(function (x) { return x.GetValueString(); }).join();
-        var contents = `[${list}]`;
-        return contents;
+        var list = this.List.toArray().map(item => {
+            return item.GetValueString();
+        });
+        return list;
     }
 }
 exports.default = ListData;

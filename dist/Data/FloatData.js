@@ -14,7 +14,7 @@ class FloatData extends AbstractData_1.default {
         this.Length = type.Width;
     }
     GetValueString() {
-        return this.Value == -16843010 ? "-1" : this.Value.toString();
+        return this.Value == -16843010 ? "-1" : String(this.Value);
     }
 }
 exports.default = FloatData;
