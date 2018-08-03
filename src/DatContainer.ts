@@ -6,7 +6,7 @@ import RecordData from "./RecordData";
 import { Stream } from "stream";
 import * as path from 'path';
 import * as fs from 'fs';
-import RecordFactory from "./RecordFactory2";
+import RecordFactory from "./RecordFactory";
 import { isNullOrUndefined } from "util";
 import { BinaryReader } from "./io";
 import { FILE } from "dns";
@@ -15,7 +15,7 @@ import FieldData from "./FieldData";
 import List from "./List";
 import * as ByteBuffer from "bytebuffer"
 import * as Long from "long"
-import * as csv from 'csvtojson'
+import * as csv from 'csvtojson/v2'
 import * as _ from 'lodash'
 import * as mkdirp from 'mkdirp'
 
