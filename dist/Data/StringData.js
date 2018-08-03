@@ -9,16 +9,12 @@ class StringData extends AbstractData_1.default {
             throw new Error("Wrong parameters for reading StringData");
         }
         this.Offset = options.getValue("offset");
-        //console.log("OFFSET: ", this.Offset);
         reader.seek(DatContainer_1.DatContainer.DataSectionOffset + this.Offset);
         this.Value = reader.ReadString();
-        //console.log("STRING VAL: ", this.Value);
-        this.Length = 2 * type.Width + 4;
-        //console.log("WIDTH: ", this.Length);
-        DatContainer_1.DatContainer.DataEntries.setValue(this.Offset, this);
+        this.Length = 2 * this.Value.length + 4;
     }
     GetValueString() {
-        return this.Value.toString();
+        return String(this.Value);
     }
 }
 exports.default = StringData;

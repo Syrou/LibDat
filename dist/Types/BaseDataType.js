@@ -11,7 +11,6 @@ class BaseDataType {
         var dictionary = new Dictionary_1.default();
         var offset = reader.ReadInt32();
         dictionary.setValue("offset", offset);
-        //console.log("OFFSET: ", offset, "BUFFER POSITION: ", reader.position());
         return dictionary;
     }
 }

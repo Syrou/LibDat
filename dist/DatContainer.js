@@ -1,6 +1,5 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const Dictionary_1 = require("./Dictionary");
 const RecordData_1 = require("./RecordData");
 const path = require("path");
 const fs = require("fs");
@@ -9,7 +8,6 @@ const util_1 = require("util");
 const io_1 = require("./io");
 const List_1 = require("./List");
 const Long = require("long");
-const _ = require("lodash");
 const mkdirp = require("mkdirp");
 class DatContainer {
     constructor(directory, filePath, x) {
@@ -27,8 +25,6 @@ class DatContainer {
                     throw new Error(errorString);
                 }
                 this.RecordInfo = recordGuard;
-                DatContainer.DataEntries = new Dictionary_1.default();
-                DatContainer.DataPointers = new Dictionary_1.default();
                 var fileToRead = `${directory}/${filePath}`;
                 var fileBytes = fs.readFile(fileToRead, (err, data) => {
                     var br = new io_1.BinaryReader(data, true);
@@ -37,7 +33,7 @@ class DatContainer {
                 });
             }
             catch (e) {
-                console.log(e);
+                console.error(e);
             }
         }
     }
@@ -49,7 +45,7 @@ class DatContainer {
         fs.writeFile(errorPath, errorString, { flag: 'w' }, function (err) {
             if (err)
                 throw err;
-            console.log(`Error details saved for file: ${workingFile}`);
+            console.error(`Error details saved for file: ${workingFile}`);
         });
     }
     Read(inStream) {
@@ -64,7 +60,7 @@ class DatContainer {
             this.Count = inStream.ReadInt32();
             //find record length
             var actualRecordLength = this.FindRecordLength(inStream, this.Count);
-            var errorString = `Actual record length = ${actualRecordLength} not equal length by the sum of each record in the xml specification: ${this.RecordInfo.Length}`;
+            var errorString = `Actual record length = ${actualRecordLength} not equal length by the sum of each record in the json specification: ${this.RecordInfo.Length}`;
             if (actualRecordLength != this.RecordInfo.Length) {
                 this.SaveError(errorString);
                 throw new Error(errorString);
@@ -92,7 +88,7 @@ class DatContainer {
             }
         }
         catch (e) {
-            console.error(`Error parsing ${this.DatName}`);
+            console.error(`Error parsing ${this.DatName}, at field type: ${DatContainer.NestedFieldType}${DatContainer.CurrentFieldType} field index:${DatContainer.CurrentFieldIndex}`);
             console.error(e);
         }
     }
@@ -104,18 +100,11 @@ class DatContainer {
         var jsonToWrite = this.GetJsonFormat();
         fs.writeFile(jsonPath, jsonToWrite, function (err) {
             if (err) {
-                return console.log(err);
+                return console.error(err);
             }
             //console.log("The file was saved!");
         });
         return `/json/${this.DatName}.json`;
-    }
-    constructJson(csv) {
-        const content = csv.split('\r\n');
-        const header = content[0].split(',');
-        return _.tail(content).map((row) => {
-            return _.zipObject(header, row.split(','));
-        });
     }
     FindRecordLength(inStream, numberOfEntries) {
         if (numberOfEntries === 0) {
@@ -147,6 +136,7 @@ class DatContainer {
                 json = {};
                 json["Row"] = this.Records.indexOf(recordData);
                 recordData.FieldsData.toArray().forEach(fieldData => {
+                    //console.log(`KEY: ${fieldData.FieldInfo.Id} -> ${fieldData.Data.GetValueString()}`)
                     json[fieldData.FieldInfo.Id] = fieldData.Data.GetValueString();
                 });
                 jsonArray.push(json);

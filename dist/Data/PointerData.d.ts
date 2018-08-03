@@ -4,7 +4,7 @@ import PointerDataType from "../Types/PointerDataType";
 import { BinaryReader } from "../io";
 import Dictionary from '../Dictionary';
 export default class PointerData extends AbstractData {
-    RefData: AbstractData;
+    RefData: AbstractData | undefined;
     RefType: BaseDataType;
     constructor(dataType: PointerDataType, reader: BinaryReader, options: Dictionary<string, any>);
     GetValueString(): string;

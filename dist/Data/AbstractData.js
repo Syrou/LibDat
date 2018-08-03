@@ -6,13 +6,6 @@ class AbstractData {
         this.Length = 0;
         this.Type = type;
     }
-    WritePointer(writer) {
-        writer.WriteByte(this.Offset);
-    }
-    WritePointerOffset(writer, NewOffset) {
-        this.Offset = NewOffset;
-        writer.WriteByte(this.Offset);
-    }
     GetValueString() {
         throw new Error("Not implemented");
     }

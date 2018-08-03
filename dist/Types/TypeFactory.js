@@ -94,17 +94,22 @@ class TypeFactory {
         throw new Error(`Could not find value for type: ${type}`);
     }
     static CreateData(type, inStream, options, fieldIndex) {
+        DatContainer_1.DatContainer.CurrentFieldType = type.Name;
         if (fieldIndex) {
+            DatContainer_1.DatContainer.CurrentFieldIndex = fieldIndex;
             this.currentFieldIndex = fieldIndex;
         }
-        if (inStream.position() > inStream.buffer.capacity()) {
+        var optionsOffset = options.getValue("offset");
+        if (inStream.position() + optionsOffset > inStream.buffer.capacity()) {
             var error = `Trying to read outside record length, this usually indicates records being assigned to wrong type!\nType was: ${this.lastSuccessfullyParsedType.Name} found at field entry number: ${this.currentFieldIndex}`;
             throw new Error(error);
         }
         if (type instanceof ListDataType_1.ListDataType) {
+            DatContainer_1.DatContainer.NestedFieldType = "list|";
             return new ListData_1.default(type, inStream, options);
         }
         if (type instanceof PointerDataType_1.default) {
+            DatContainer_1.DatContainer.NestedFieldType = "ref|";
             return new PointerData_1.default(type, inStream, options);
         }
         var data;
@@ -150,6 +155,7 @@ class TypeFactory {
                 throw new Error(error);
             }
         }
+        DatContainer_1.DatContainer.NestedFieldType = "";
         return data;
     }
 }

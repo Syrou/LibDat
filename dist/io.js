@@ -59,12 +59,14 @@ class BinaryReader {
     }
     ReadString() {
         var strb = "";
-        var chr;
-        while ((chr = this.buffer.readInt16()) != 0) {
-            strb = strb.concat(String.fromCharCode(chr));
+        var chr = -1;
+        if (this.position() + 2 < this.buffer.capacity()) {
+            while ((chr = this.buffer.readInt16()) != 0) {
+                strb = strb.concat(String.fromCharCode(chr));
+            }
         }
         if (chr != 0) {
-            console.log("OOOPS?");
+            throw Error("We were trying to find a string, but found no null terminator, this is probably not a string type");
         }
         return strb;
     }

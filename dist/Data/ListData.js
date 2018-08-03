@@ -29,7 +29,7 @@ class ListData extends AbstractData_1.default {
                 var item = TypeFactory_1.default.CreateData(this.ListType, reader, dictionary, i);
                 this.List.add(item);
             }
-            DatContainer_1.DatContainer.DataEntries.setValue(this.Offset, this);
+            //DatContainer.DataEntries.setValue(this.Offset, this);
             this.List.clear();
         }
     }

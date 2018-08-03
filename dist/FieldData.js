@@ -20,13 +20,18 @@ class FieldData {
             throw new Error("FieldData of pointer type doesn't have data of PointerData class");
         }
         if (this.FieldInfo.FieldType.Width != 8) {
-            return `${pData.RefData.Offset}`;
+            if (pData.RefData) {
+                return `${pData.RefData.Offset}`;
+            }
         }
         var lData = pData.RefData;
         if (util_1.isNullOrUndefined(lData)) {
             throw new Error("Didn't find ListData data at offset of FieldData of pointer to list type");
         }
-        return `[${lData.Count}]${pData.RefData.Offset}`;
+        if (pData.RefData) {
+            return `[${lData.Count}]${pData.RefData.Offset}`;
+        }
+        return "";
     }
 }
 exports.default = FieldData;
