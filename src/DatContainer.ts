@@ -38,9 +38,9 @@ export class DatContainer {
 			if(filePath !== undefined && filePath.length > 0){
 				this.Directory = directory;
 				this.DatName = path.basename(filePath, ".dat")
-        this.Path = directory
+        		this.Path = directory
 				RecordFactory.initialize();
-        try {
+       			try {
 				      var recordGuard = RecordFactory.GetRecordInfo(this.DatName);
       				if(isNullOrUndefined(recordGuard)){
 								var errorString = `Could not find records for file: ${this.DatName}`;
@@ -48,16 +48,16 @@ export class DatContainer {
       					throw new Error(errorString)
       				}
       				this.RecordInfo = recordGuard;
-              var fileToRead = `${directory}/${filePath}`
+              		var fileToRead = `${directory}/${filePath}`
       				var fileBytes = fs.readFile(fileToRead, (err,data)=>{
       					var br = new BinaryReader(data, true)
       					this.Read(br);
       					x(this);
       				});
-        } catch(e) {
-          console.error(e)
-        }
-	     }
+				} catch(e) {
+				console.error(e)
+				}
+			}
   }
 
 	SaveError(errorString:String){
@@ -139,9 +139,9 @@ export class DatContainer {
 			return 0;
 		}
 
-    if(isNullOrUndefined(inStream)){
-      return 0;
-    }
+		if(isNullOrUndefined(inStream)){
+		return 0;
+		}
 
 		inStream.seek(4);
 		var stringLength = inStream.buffer.capacity();
